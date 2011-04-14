@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classray_1_1_drawable.html" title="ray::Drawable" alt="" coords="89,83,196,112"/>
+<area shape="rect" id="node11" href="$classray_1_1_light.html" title="ray::Light" alt="" coords="220,83,300,112"/>
+<area shape="rect" id="node5" href="$classray_1_1_box.html" title="ray::Box" alt="" coords="5,160,77,189"/>
+<area shape="rect" id="node7" href="$classray_1_1_plane.html" title="ray::Plane" alt="" coords="101,160,184,189"/>
+<area shape="rect" id="node9" href="$classray_1_1_sphere.html" title="ray::Sphere" alt="" coords="208,160,301,189"/>
+</map>
