@@ -27,14 +27,6 @@ Writer::Writer()
 {
 
 }
-FILEFORMAT Writer::getFileFormat() const
-{
-    return _fmt;
-}
-void Writer::setFileFormat(FILEFORMAT f)
-{
-    _fmt = f;
-}
 void Writer::setFileFormat(const std::string& ext)
 {
     if (ext.compare("ppm") == 0)
@@ -42,18 +34,6 @@ void Writer::setFileFormat(const std::string& ext)
     else if (ext.compare("jpg") == 0)
         _fmt = JPG;
 
-}
-const std::string& Writer::getFileNamePrefix() const
-{
-    return _prefix;
-}
-std::string& Writer::getFileNamePrefix()
-{
-    return _prefix;
-}
-void Writer::setFileNamePrefix(const std::string& prefix)
-{
-    _prefix = prefix;
 }
 bool Writer::write(const PixelBuffer &buffer, uint32_t height, uint32_t width )
 {
@@ -98,10 +78,6 @@ bool Writer::writeJPG(const PixelBuffer &buffer, uint32_t height, uint32_t width
 {
     return false;
 }
-std::string& Writer::getFilePath()
-{
-    return _path;
-} 
 std::string Writer::getOutputFilePath() const
 {
     if (_path.length() > 0)

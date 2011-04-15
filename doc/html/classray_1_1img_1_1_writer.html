@@ -86,31 +86,281 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="contents">
 <!-- doxytag: class="ray::img::Writer" -->
+<p>writes images to disk  
+ <a href="classray_1_1img_1_1_writer.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_image_i_o_8h_source.html">ImageIO.h</a>&gt;</code></p>
+
 <p><a href="classray_1_1img_1_1_writer-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a004acbe914b4327ba470719da3b5de47"></a><!-- doxytag: member="ray::img::Writer::setFileFormat" ref="a004acbe914b4327ba470719da3b5de47" args="(const std::string &amp;ext)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setFileFormat</b> (const std::string &amp;ext)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d5955b329d6a74d53a25cf2e9967e71"></a><!-- doxytag: member="ray::img::Writer::setFileFormat" ref="a7d5955b329d6a74d53a25cf2e9967e71" args="(FILEFORMAT f)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setFileFormat</b> (FILEFORMAT f)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29d1de2013464651a6d077cc57d71ca1"></a><!-- doxytag: member="ray::img::Writer::getFileFormat" ref="a29d1de2013464651a6d077cc57d71ca1" args="() const " -->
-FILEFORMAT&#160;</td><td class="memItemRight" valign="bottom"><b>getFileFormat</b> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a864bac27d239cc509147e34a39b56e85"></a><!-- doxytag: member="ray::img::Writer::setFileNamePrefix" ref="a864bac27d239cc509147e34a39b56e85" args="(const std::string &amp;prefix)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setFileNamePrefix</b> (const std::string &amp;prefix)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a314802cc517e5607575c6df3acdb202d"></a><!-- doxytag: member="ray::img::Writer::getFileNamePrefix" ref="a314802cc517e5607575c6df3acdb202d" args="()" -->
-std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getFileNamePrefix</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a57c1578c99dfb45c6f85ce9792bc342c"></a><!-- doxytag: member="ray::img::Writer::getFileNamePrefix" ref="a57c1578c99dfb45c6f85ce9792bc342c" args="() const " -->
-const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getFileNamePrefix</b> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeeec35b65f4a3808fe228ad3d462dd32"></a><!-- doxytag: member="ray::img::Writer::getFilePath" ref="aeeec35b65f4a3808fe228ad3d462dd32" args="()" -->
-std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getFilePath</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4aaee90a93a0d939c38a98c4c80ee356"></a><!-- doxytag: member="ray::img::Writer::getFilePath" ref="a4aaee90a93a0d939c38a98c4c80ee356" args="() const " -->
-const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getFilePath</b> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa20cbeb1b047ffb67e18eb437ca566e8"></a><!-- doxytag: member="ray::img::Writer::getOutputFilePath" ref="aa20cbeb1b047ffb67e18eb437ca566e8" args="() const " -->
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getOutputFilePath</b> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a24e4e43fdb3977eea7cd73da35672252"></a><!-- doxytag: member="ray::img::Writer::write" ref="a24e4e43fdb3977eea7cd73da35672252" args="(const PixelBuffer &amp;pbuffer, uint32_t height, uint32_t width)" -->
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const PixelBuffer &amp;pbuffer, uint32_t height, uint32_t width)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aedc04cd5fb7b4b99d3ad906fef2116ce"></a><!-- doxytag: member="ray::img::Writer::Writer" ref="aedc04cd5fb7b4b99d3ad906fef2116ce" args="()" -->
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1img_1_1_writer.html#aedc04cd5fb7b4b99d3ad906fef2116ce">Writer</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ctor <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1img_1_1_writer.html#a004acbe914b4327ba470719da3b5de47">setFileFormat</a> (const std::string &amp;ext)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1img_1_1_writer.html#af5164f2d0563263ab5b686f2f73a615d">setFileFormat</a> (FILEFORMAT f)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">FILEFORMAT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1img_1_1_writer.html#a3ef03de406df925f23e6be6834c621c0">getFileFormat</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1img_1_1_writer.html#a74748610df3ca6519dfc11b6ffa0c888">setFileNamePrefix</a> (const std::string &amp;prefix)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1img_1_1_writer.html#a3b1b68aa5e6b356ad7b436593883c96b">getFileNamePrefix</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1img_1_1_writer.html#a06f4561f3417130bf0916a1eb6b576c0">getFileNamePrefix</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1img_1_1_writer.html#a1c325a60b5f2ff3c279e7bd2e92ddc01">setFilePath</a> (const std::string &amp;path)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1img_1_1_writer.html#afa08b476b8f7523ecb8a53b9222b3a92">getFilePath</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1img_1_1_writer.html#a4aaee90a93a0d939c38a98c4c80ee356">getFilePath</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1img_1_1_writer.html#aa20cbeb1b047ffb67e18eb437ca566e8">getOutputFilePath</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1img_1_1_writer.html#a24e4e43fdb3977eea7cd73da35672252">write</a> (const PixelBuffer &amp;pbuffer, uint32_t height, uint32_t width)</td></tr>
 </table>
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>writes images to disk </p>
+<p>a file writer class which is capable of writing various image formats </p>
+</div><hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a3ef03de406df925f23e6be6834c621c0"></a><!-- doxytag: member="ray::img::Writer::getFileFormat" ref="a3ef03de406df925f23e6be6834c621c0" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FILEFORMAT ray::img::Writer::getFileFormat </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>get the current output file format </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the current output file format </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3b1b68aa5e6b356ad7b436593883c96b"></a><!-- doxytag: member="ray::img::Writer::getFileNamePrefix" ref="a3b1b68aa5e6b356ad7b436593883c96b" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string&amp; ray::img::Writer::getFileNamePrefix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>get the current filename </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>a reference to the current filename </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a06f4561f3417130bf0916a1eb6b576c0"></a><!-- doxytag: member="ray::img::Writer::getFileNamePrefix" ref="a06f4561f3417130bf0916a1eb6b576c0" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; ray::img::Writer::getFileNamePrefix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>get the current filename - const version </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>a reference to the current filename </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afa08b476b8f7523ecb8a53b9222b3a92"></a><!-- doxytag: member="ray::img::Writer::getFilePath" ref="afa08b476b8f7523ecb8a53b9222b3a92" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string&amp; ray::img::Writer::getFilePath </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>get the output path </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the current output path </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4aaee90a93a0d939c38a98c4c80ee356"></a><!-- doxytag: member="ray::img::Writer::getFilePath" ref="a4aaee90a93a0d939c38a98c4c80ee356" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; ray::img::Writer::getFilePath </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>get the output path - const version </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the current output path </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa20cbeb1b047ffb67e18eb437ca566e8"></a><!-- doxytag: member="ray::img::Writer::getOutputFilePath" ref="aa20cbeb1b047ffb67e18eb437ca566e8" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Writer::getOutputFilePath </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>construct and return the full output path (incl. filename) for the next <a class="el" href="classray_1_1img_1_1_writer.html#a24e4e43fdb3977eea7cd73da35672252">write()</a> operation </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the full output path </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a004acbe914b4327ba470719da3b5de47"></a><!-- doxytag: member="ray::img::Writer::setFileFormat" ref="a004acbe914b4327ba470719da3b5de47" args="(const std::string &amp;ext)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Writer::setFileFormat </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>ext</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>set output format via file extension </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ext</td><td>a reference to a string containing a well-established file extension </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af5164f2d0563263ab5b686f2f73a615d"></a><!-- doxytag: member="ray::img::Writer::setFileFormat" ref="af5164f2d0563263ab5b686f2f73a615d" args="(FILEFORMAT f)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ray::img::Writer::setFileFormat </td>
+          <td>(</td>
+          <td class="paramtype">FILEFORMAT&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>set output format </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>the output file format </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a74748610df3ca6519dfc11b6ffa0c888"></a><!-- doxytag: member="ray::img::Writer::setFileNamePrefix" ref="a74748610df3ca6519dfc11b6ffa0c888" args="(const std::string &amp;prefix)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ray::img::Writer::setFileNamePrefix </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>prefix</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>set which filename shall be used for the next <a class="el" href="classray_1_1img_1_1_writer.html#a24e4e43fdb3977eea7cd73da35672252">write()</a> call </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prefix</td><td>a reference to the new filename </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1c325a60b5f2ff3c279e7bd2e92ddc01"></a><!-- doxytag: member="ray::img::Writer::setFilePath" ref="a1c325a60b5f2ff3c279e7bd2e92ddc01" args="(const std::string &amp;path)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ray::img::Writer::setFilePath </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>set the output path </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>the new output path </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a24e4e43fdb3977eea7cd73da35672252"></a><!-- doxytag: member="ray::img::Writer::write" ref="a24e4e43fdb3977eea7cd73da35672252" args="(const PixelBuffer &amp;pbuffer, uint32_t height, uint32_t width)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Writer::write </td>
+          <td>(</td>
+          <td class="paramtype">const PixelBuffer &amp;&#160;</td>
+          <td class="paramname"><em>pbuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>width</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>write the pixelbuffer to disk using the current format &amp; name settings </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pbuffer</td><td>a reference to the pixelbuffer </td></tr>
+    <tr><td class="paramname">height</td><td>the height of the given pixelbuffer </td></tr>
+    <tr><td class="paramname">width</td><td>the width of the given pixelbuffer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true if writing was successfull </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_image_i_o_8h_source.html">ImageIO.h</a></li>
 <li>ImageWriter.cpp</li>
@@ -122,7 +372,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const Pixe
       <li class="navelem"><b>ray</b>      </li>
       <li class="navelem"><b>img</b>      </li>
       <li class="navelem"><a class="el" href="classray_1_1img_1_1_writer.html">Writer</a>      </li>
-      <li class="footer">Generated on Thu Apr 14 2011 17:23:18 for rtracer by&#160;
+      <li class="footer">Generated on Fri Apr 15 2011 16:50:50 for rtracer by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>
@@ -132,7 +382,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const Pixe
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">

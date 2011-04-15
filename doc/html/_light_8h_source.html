@@ -107,67 +107,66 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00025"></a>00025 
 <a name="l00026"></a>00026 <span class="keyword">namespace </span>ray
 <a name="l00027"></a>00027 {
-<a name="l00028"></a><a class="code" href="classray_1_1_light.html">00028</a>     <span class="keyword">class </span><a class="code" href="classray_1_1_light.html">Light</a> : <span class="keyword">public</span> <a class="code" href="classray_1_1_i_intersectable.html">IIntersectable</a>
-<a name="l00029"></a>00029     {
-<a name="l00030"></a>00030         <span class="keyword">public</span>:
-<a name="l00031"></a>00031             <span class="keyword">enum</span> TYPE
-<a name="l00032"></a>00032             {
-<a name="l00033"></a>00033                 DIRECTIONAL, 
-<a name="l00034"></a>00034                 POINT,
-<a name="l00035"></a>00035                 SPOT
-<a name="l00036"></a>00036             };
-<a name="l00037"></a>00037             <a class="code" href="classray_1_1_light.html">Light</a>(<span class="keyword">const</span> std::string&amp; name = <span class="stringliteral">&quot;unnamed_light&quot;</span>);
-<a name="l00038"></a>00038             <a class="code" href="classray_1_1_light.html">Light</a>(<span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; pos, <span class="keyword">const</span> std::string&amp; name = <span class="stringliteral">&quot;unnamed_light&quot;</span>);
-<a name="l00039"></a>00039             <a class="code" href="classray_1_1_light.html">Light</a>(<span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; pos, <span class="keyword">const</span> <a class="code" href="classmath_1_1_vec4f.html">math::Vec4</a>&amp; color, <span class="keyword">const</span> std::string&amp; name = <span class="stringliteral">&quot;unnamed_light&quot;</span>);
-<a name="l00040"></a>00040             <span class="keyword">virtual</span> ~<a class="code" href="classray_1_1_light.html">Light</a>();
-<a name="l00041"></a>00041 
-<a name="l00042"></a>00042             <span class="keywordtype">void</span> setColor(<span class="keyword">const</span> <a class="code" href="classmath_1_1_vec4f.html">math::Vec4</a>&amp; color) { _color = color; }
-<a name="l00043"></a>00043             <a class="code" href="classmath_1_1_vec4f.html">math::Vec4</a>&amp; getColor() { <span class="keywordflow">return</span> _color; }
-<a name="l00044"></a>00044             <span class="keyword">const</span> <a class="code" href="classmath_1_1_vec4f.html">math::Vec4</a>&amp; getColor()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _color; }
+<a name="l00033"></a><a class="code" href="classray_1_1_light.html">00033</a>     <span class="keyword">class </span><a class="code" href="classray_1_1_light.html" title="a light source for the scene">Light</a> : <span class="keyword">public</span> <a class="code" href="classray_1_1_i_intersectable.html">IIntersectable</a>
+<a name="l00034"></a>00034     {
+<a name="l00035"></a>00035         <span class="keyword">public</span>:
+<a name="l00039"></a><a class="code" href="classray_1_1_light.html#a433d9b2018ef1eaa6b343d8bf987c3b9">00039</a>             <span class="keyword">enum</span> <a class="code" href="classray_1_1_light.html#a433d9b2018ef1eaa6b343d8bf987c3b9">TYPE</a>
+<a name="l00040"></a>00040             {
+<a name="l00041"></a><a class="code" href="classray_1_1_light.html#a433d9b2018ef1eaa6b343d8bf987c3b9a401c4a6e791336dbee76eb61bc8d0a78">00041</a>                 <a class="code" href="classray_1_1_light.html#a433d9b2018ef1eaa6b343d8bf987c3b9a401c4a6e791336dbee76eb61bc8d0a78">DIRECTIONAL</a>,  
+<a name="l00042"></a><a class="code" href="classray_1_1_light.html#a433d9b2018ef1eaa6b343d8bf987c3b9ad8b2a9dd3719926228bc2bec1636b742">00042</a>                 <a class="code" href="classray_1_1_light.html#a433d9b2018ef1eaa6b343d8bf987c3b9ad8b2a9dd3719926228bc2bec1636b742">POINT</a>,        
+<a name="l00043"></a><a class="code" href="classray_1_1_light.html#a433d9b2018ef1eaa6b343d8bf987c3b9aa09b63bebdd84b46fddd320c9f9a862b">00043</a>                 <a class="code" href="classray_1_1_light.html#a433d9b2018ef1eaa6b343d8bf987c3b9aa09b63bebdd84b46fddd320c9f9a862b">SPOT</a>          
+<a name="l00044"></a>00044             };
 <a name="l00045"></a>00045 
-<a name="l00046"></a>00046             <span class="keywordtype">float</span> getTransparency()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _color[3]; } 
-<a name="l00047"></a>00047             <span class="keywordtype">void</span> setTransparency(<span class="keywordtype">float</span> alpha) { _color[3] = alpha; }
-<a name="l00048"></a>00048 
-<a name="l00049"></a>00049             <span class="keywordtype">void</span> setPosition(<span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; position) { _position = position; }
-<a name="l00050"></a>00050             <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; getPosition() { <span class="keywordflow">return</span> _position; }
-<a name="l00051"></a>00051             <span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; getPosition()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _position; }
-<a name="l00052"></a>00052 
-<a name="l00053"></a>00053             <span class="keywordtype">void</span> setDirection(<span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; normal) { _normal = normal; }
-<a name="l00054"></a>00054             <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a> getDirection()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _normal; }
-<a name="l00055"></a>00055 
-<a name="l00056"></a>00056             <span class="keywordtype">void</span> setName(<span class="keyword">const</span> std::string&amp; name) { _name = name; }
-<a name="l00057"></a>00057             std::string&amp; getName() { <span class="keywordflow">return</span> _name; }
-<a name="l00058"></a>00058             <span class="keyword">const</span> std::string&amp; getName()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _name; }
-<a name="l00059"></a>00059 
-<a name="l00060"></a>00060             <span class="keywordtype">bool</span> isOmnidirectional()<span class="keyword"> const </span>{ <span class="keywordflow">if</span> (_normal.<a class="code" href="classmath_1_1_vec3f.html#a9ecfa170ae61ea6c4adf10b826fab9b9">length</a>() &lt; 0.0001f) <span class="keywordflow">return</span> <span class="keyword">true</span>; <span class="keywordflow">else</span> <span class="keywordflow">return</span> <span class="keyword">false</span>;}
-<a name="l00061"></a>00061             <span class="keywordtype">bool</span> isDirectional()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> !isOmnidirectional();}
-<a name="l00062"></a>00062 
-<a name="l00063"></a>00063             <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classray_1_1_light.html#ac92739f21dd87a5a4e9c106dd7b2ec52">intersect</a>(<span class="keyword">const</span> <a class="code" href="classray_1_1_ray.html">Ray</a>&amp; r, <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; point, <span class="keywordtype">float</span> &amp;dist) <span class="keyword">const</span>;
-<a name="l00064"></a>00064 
-<a name="l00065"></a>00065             TYPE getType()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _type; }
-<a name="l00066"></a>00066             <span class="keywordtype">void</span> setType(TYPE t) { _type = t; }
-<a name="l00067"></a>00067 
-<a name="l00068"></a>00068             <span class="keywordtype">float</span> getIntensity()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _intensity; } 
-<a name="l00069"></a>00069             <span class="keywordtype">void</span> setIntensity(<span class="keywordtype">float</span> intensity) { _intensity = intensity; }
-<a name="l00070"></a>00070         <span class="keyword">private</span>:
-<a name="l00071"></a>00071             std::string _name;
-<a name="l00072"></a>00072             <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a> _position;
-<a name="l00073"></a>00073             <a class="code" href="classmath_1_1_vec4f.html">math::Vec4</a> _color;
-<a name="l00074"></a>00074             <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a> _normal;
-<a name="l00075"></a>00075             <span class="keywordtype">float</span> _size;
-<a name="l00076"></a>00076             <span class="keywordtype">float</span> _cutoff;
-<a name="l00077"></a>00077             TYPE _type;
-<a name="l00078"></a>00078             <span class="keywordtype">float</span> _intensity;
-<a name="l00079"></a>00079     };
-<a name="l00080"></a>00080     <span class="keyword">typedef</span> std::vector&lt;Light*&gt; LightVector;
-<a name="l00081"></a>00081 }
-<a name="l00082"></a>00082 <span class="preprocessor">#endif </span>
+<a name="l00050"></a>00050             <a class="code" href="classray_1_1_light.html#a7f6bce92ece66c86ce72c777dc078a6b">Light</a>(<span class="keyword">const</span> std::string&amp; name = <span class="stringliteral">&quot;unnamed_light&quot;</span>);
+<a name="l00056"></a>00056             <a class="code" href="classray_1_1_light.html#a7f6bce92ece66c86ce72c777dc078a6b">Light</a>(<span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; pos, <span class="keyword">const</span> std::string&amp; name = <span class="stringliteral">&quot;unnamed_light&quot;</span>);
+<a name="l00063"></a>00063             <a class="code" href="classray_1_1_light.html#a7f6bce92ece66c86ce72c777dc078a6b">Light</a>(<span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; pos, <span class="keyword">const</span> <a class="code" href="classmath_1_1_vec4f.html">math::Vec4</a>&amp; color, <span class="keyword">const</span> std::string&amp; name = <span class="stringliteral">&quot;unnamed_light&quot;</span>);
+<a name="l00065"></a>00065             <span class="keyword">virtual</span> <a class="code" href="classray_1_1_light.html#ad0e59fad13bb6cfadc25b2c477e9ddc7" title="dtor">~Light</a>();
+<a name="l00066"></a>00066 
+<a name="l00071"></a><a class="code" href="classray_1_1_light.html#adefb4ede39308f8a9c4fa967895564ac">00071</a>             <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classray_1_1_light.html#adefb4ede39308f8a9c4fa967895564ac">setColor</a>(<span class="keyword">const</span> <a class="code" href="classmath_1_1_vec4f.html">math::Vec4</a>&amp; color) { _color = color; }
+<a name="l00076"></a><a class="code" href="classray_1_1_light.html#ae26a502f75ef94e2213e8921df29f005">00076</a>             <span class="keyword">inline</span> <a class="code" href="classmath_1_1_vec4f.html">math::Vec4</a>&amp; <a class="code" href="classray_1_1_light.html#ae26a502f75ef94e2213e8921df29f005">getColor</a>() { <span class="keywordflow">return</span> _color; }
+<a name="l00081"></a><a class="code" href="classray_1_1_light.html#a77021396d05cf48f1f411f974e049fd2">00081</a>             <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classmath_1_1_vec4f.html">math::Vec4</a>&amp; <a class="code" href="classray_1_1_light.html#a77021396d05cf48f1f411f974e049fd2">getColor</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _color; }
+<a name="l00082"></a>00082 
+<a name="l00088"></a><a class="code" href="classray_1_1_light.html#a3382f520d535af9c0683b1f9a47e2521">00088</a>             <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classray_1_1_light.html#a3382f520d535af9c0683b1f9a47e2521">setTransparency</a>(<span class="keywordtype">float</span> alpha) { _color[3] = alpha; }
+<a name="l00094"></a><a class="code" href="classray_1_1_light.html#aae6807deb98299984212e2d1adf0a3bd">00094</a>             <span class="keyword">inline</span> <span class="keywordtype">float</span> <a class="code" href="classray_1_1_light.html#aae6807deb98299984212e2d1adf0a3bd">getTransparency</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _color[3]; } 
+<a name="l00095"></a>00095 
+<a name="l00100"></a><a class="code" href="classray_1_1_light.html#ade7ffac220153270e566a42f368efc58">00100</a>             <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classray_1_1_light.html#ade7ffac220153270e566a42f368efc58">setPosition</a>(<span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; position) { _position = position; }
+<a name="l00105"></a><a class="code" href="classray_1_1_light.html#a1db9387fb99627a04756a32f33d0a47a">00105</a>             <span class="keyword">inline</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; <a class="code" href="classray_1_1_light.html#a1db9387fb99627a04756a32f33d0a47a">getPosition</a>() { <span class="keywordflow">return</span> _position; }
+<a name="l00110"></a><a class="code" href="classray_1_1_light.html#a47ead687fd757229f06af7a45d6c6115">00110</a>             <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; <a class="code" href="classray_1_1_light.html#a47ead687fd757229f06af7a45d6c6115">getPosition</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _position; }
+<a name="l00111"></a>00111 
+<a name="l00116"></a><a class="code" href="classray_1_1_light.html#adf88905583e3f3871700e004e9a04c47">00116</a>             <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classray_1_1_light.html#adf88905583e3f3871700e004e9a04c47">setDirection</a>(<span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; normal) { _normal = normal; }
+<a name="l00121"></a><a class="code" href="classray_1_1_light.html#a27d909595aa6a42ffc84c7d5917fb20d">00121</a>             <span class="keyword">inline</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; <a class="code" href="classray_1_1_light.html#a27d909595aa6a42ffc84c7d5917fb20d">getDirection</a>() { <span class="keywordflow">return</span> _normal; }
+<a name="l00126"></a><a class="code" href="classray_1_1_light.html#ad79386cb4d11c0b3c05023c7613f7a75">00126</a>             <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; <a class="code" href="classray_1_1_light.html#ad79386cb4d11c0b3c05023c7613f7a75">getDirection</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _normal; }
+<a name="l00127"></a>00127 
+<a name="l00132"></a><a class="code" href="classray_1_1_light.html#a087fe95bc22ae5d73d8666d4d82f8b80">00132</a>             <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classray_1_1_light.html#a087fe95bc22ae5d73d8666d4d82f8b80">setName</a>(<span class="keyword">const</span> std::string&amp; name) { _name = name; }
+<a name="l00137"></a><a class="code" href="classray_1_1_light.html#a7af1b7b01ea63eb390809972c707103b">00137</a>             <span class="keyword">inline</span> std::string&amp; <a class="code" href="classray_1_1_light.html#a7af1b7b01ea63eb390809972c707103b">getName</a>() { <span class="keywordflow">return</span> _name; }
+<a name="l00142"></a><a class="code" href="classray_1_1_light.html#abec2c34ff5a0d71c0698bc8f26cc07e2">00142</a>             <span class="keyword">inline</span> <span class="keyword">const</span> std::string&amp; <a class="code" href="classray_1_1_light.html#abec2c34ff5a0d71c0698bc8f26cc07e2">getName</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _name; }
+<a name="l00143"></a>00143 
+<a name="l00147"></a>00147             <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classray_1_1_light.html#ac92739f21dd87a5a4e9c106dd7b2ec52">intersect</a>(<span class="keyword">const</span> <a class="code" href="classray_1_1_ray.html">Ray</a>&amp; r, <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; point, <span class="keywordtype">float</span> &amp;dist) <span class="keyword">const</span>;
+<a name="l00148"></a>00148 
+<a name="l00153"></a><a class="code" href="classray_1_1_light.html#ad4f6707f9ff2cc5658640afd535af4f1">00153</a>             <span class="keyword">inline</span> <a class="code" href="classray_1_1_light.html#a433d9b2018ef1eaa6b343d8bf987c3b9">TYPE</a> <a class="code" href="classray_1_1_light.html#ad4f6707f9ff2cc5658640afd535af4f1">getType</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _type; }
+<a name="l00158"></a><a class="code" href="classray_1_1_light.html#af349c87f5280d3e5900426881b0f3614">00158</a>             <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classray_1_1_light.html#af349c87f5280d3e5900426881b0f3614">setType</a>(<a class="code" href="classray_1_1_light.html#a433d9b2018ef1eaa6b343d8bf987c3b9">TYPE</a> t) { _type = t; }
+<a name="l00159"></a>00159 
+<a name="l00164"></a><a class="code" href="classray_1_1_light.html#ad0d445cc0e2088397203f3ab6c8582c8">00164</a>             <span class="keyword">inline</span> <span class="keywordtype">float</span> <a class="code" href="classray_1_1_light.html#ad0d445cc0e2088397203f3ab6c8582c8">getIntensity</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _intensity; } 
+<a name="l00169"></a><a class="code" href="classray_1_1_light.html#a8d5ed792b4fe855ee89f61e0794398ef">00169</a>             <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classray_1_1_light.html#a8d5ed792b4fe855ee89f61e0794398ef">setIntensity</a>(<span class="keywordtype">float</span> intensity) { _intensity = intensity; }
+<a name="l00170"></a>00170         <span class="keyword">private</span>:
+<a name="l00171"></a>00171             std::string _name;
+<a name="l00172"></a>00172             <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a> _position;
+<a name="l00173"></a>00173             <a class="code" href="classmath_1_1_vec4f.html">math::Vec4</a> _color;
+<a name="l00174"></a>00174             <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a> _normal;
+<a name="l00175"></a>00175             <span class="keywordtype">float</span> _size;
+<a name="l00176"></a>00176             <span class="keywordtype">float</span> _cutoff;
+<a name="l00177"></a>00177             <a class="code" href="classray_1_1_light.html#a433d9b2018ef1eaa6b343d8bf987c3b9">TYPE</a> _type;
+<a name="l00178"></a>00178             <span class="keywordtype">float</span> _intensity;
+<a name="l00179"></a>00179     };
+<a name="l00180"></a>00180     <span class="keyword">typedef</span> std::vector&lt;Light*&gt; LightVector;
+<a name="l00181"></a>00181 }
+<a name="l00182"></a>00182 <span class="preprocessor">#endif </span>
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><b>Light.h</b>      </li>
-      <li class="footer">Generated on Thu Apr 14 2011 17:23:18 for rtracer by&#160;
+      <li class="footer">Generated on Fri Apr 15 2011 16:50:50 for rtracer by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>
@@ -177,7 +176,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">

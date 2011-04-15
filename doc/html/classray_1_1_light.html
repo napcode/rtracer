@@ -86,7 +86,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">ray::Light Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="ray::Light" --><!-- doxytag: inherits="ray::IIntersectable" --><div class="dynheader">
+<!-- doxytag: class="ray::Light" --><!-- doxytag: inherits="ray::IIntersectable" -->
+<p>a light source for the scene  
+ <a href="classray_1_1_light.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_light_8h_source.html">Light.h</a>&gt;</code></p>
+<div class="dynheader">
 Inheritance diagram for ray::Light:</div>
 <div class="dyncontent">
 <div class="center"><img src="classray_1_1_light__inherit__graph.png" border="0" usemap="#ray_1_1_light_inherit__map" alt="Inheritance graph"/></div>
@@ -105,59 +110,371 @@ Collaboration diagram for ray::Light:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>TYPE</b> { <b>DIRECTIONAL</b>, 
-<b>POINT</b>, 
-<b>SPOT</b>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_light.html#a433d9b2018ef1eaa6b343d8bf987c3b9">TYPE</a> { <a class="el" href="classray_1_1_light.html#a433d9b2018ef1eaa6b343d8bf987c3b9a401c4a6e791336dbee76eb61bc8d0a78">DIRECTIONAL</a>, 
+<a class="el" href="classray_1_1_light.html#a433d9b2018ef1eaa6b343d8bf987c3b9ad8b2a9dd3719926228bc2bec1636b742">POINT</a>, 
+<a class="el" href="classray_1_1_light.html#a433d9b2018ef1eaa6b343d8bf987c3b9aa09b63bebdd84b46fddd320c9f9a862b">SPOT</a>
  }</td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f6bce92ece66c86ce72c777dc078a6b"></a><!-- doxytag: member="ray::Light::Light" ref="a7f6bce92ece66c86ce72c777dc078a6b" args="(const std::string &amp;name=&quot;unnamed_light&quot;)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><b>Light</b> (const std::string &amp;name=&quot;unnamed_light&quot;)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a801dd42c4f76222f6a19fa8e2a50b0b4"></a><!-- doxytag: member="ray::Light::Light" ref="a801dd42c4f76222f6a19fa8e2a50b0b4" args="(const math::Vec3 &amp;pos, const std::string &amp;name=&quot;unnamed_light&quot;)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><b>Light</b> (const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;pos, const std::string &amp;name=&quot;unnamed_light&quot;)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a82bd8cce513d52e84032f1c71e9bafe2"></a><!-- doxytag: member="ray::Light::Light" ref="a82bd8cce513d52e84032f1c71e9bafe2" args="(const math::Vec3 &amp;pos, const math::Vec4 &amp;color, const std::string &amp;name=&quot;unnamed_light&quot;)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><b>Light</b> (const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;pos, const <a class="el" href="classmath_1_1_vec4f.html">math::Vec4</a> &amp;color, const std::string &amp;name=&quot;unnamed_light&quot;)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adefb4ede39308f8a9c4fa967895564ac"></a><!-- doxytag: member="ray::Light::setColor" ref="adefb4ede39308f8a9c4fa967895564ac" args="(const math::Vec4 &amp;color)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setColor</b> (const <a class="el" href="classmath_1_1_vec4f.html">math::Vec4</a> &amp;color)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae26a502f75ef94e2213e8921df29f005"></a><!-- doxytag: member="ray::Light::getColor" ref="ae26a502f75ef94e2213e8921df29f005" args="()" -->
-<a class="el" href="classmath_1_1_vec4f.html">math::Vec4</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getColor</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a77021396d05cf48f1f411f974e049fd2"></a><!-- doxytag: member="ray::Light::getColor" ref="a77021396d05cf48f1f411f974e049fd2" args="() const " -->
-const <a class="el" href="classmath_1_1_vec4f.html">math::Vec4</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getColor</b> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae6807deb98299984212e2d1adf0a3bd"></a><!-- doxytag: member="ray::Light::getTransparency" ref="aae6807deb98299984212e2d1adf0a3bd" args="() const " -->
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getTransparency</b> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3382f520d535af9c0683b1f9a47e2521"></a><!-- doxytag: member="ray::Light::setTransparency" ref="a3382f520d535af9c0683b1f9a47e2521" args="(float alpha)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setTransparency</b> (float alpha)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade7ffac220153270e566a42f368efc58"></a><!-- doxytag: member="ray::Light::setPosition" ref="ade7ffac220153270e566a42f368efc58" args="(const math::Vec3 &amp;position)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setPosition</b> (const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;position)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1db9387fb99627a04756a32f33d0a47a"></a><!-- doxytag: member="ray::Light::getPosition" ref="a1db9387fb99627a04756a32f33d0a47a" args="()" -->
-<a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getPosition</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a47ead687fd757229f06af7a45d6c6115"></a><!-- doxytag: member="ray::Light::getPosition" ref="a47ead687fd757229f06af7a45d6c6115" args="() const " -->
-const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getPosition</b> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf88905583e3f3871700e004e9a04c47"></a><!-- doxytag: member="ray::Light::setDirection" ref="adf88905583e3f3871700e004e9a04c47" args="(const math::Vec3 &amp;normal)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setDirection</b> (const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;normal)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f6b1d53b04172e6d92a8fc409968035"></a><!-- doxytag: member="ray::Light::getDirection" ref="a1f6b1d53b04172e6d92a8fc409968035" args="() const " -->
-<a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getDirection</b> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a087fe95bc22ae5d73d8666d4d82f8b80"></a><!-- doxytag: member="ray::Light::setName" ref="a087fe95bc22ae5d73d8666d4d82f8b80" args="(const std::string &amp;name)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setName</b> (const std::string &amp;name)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7af1b7b01ea63eb390809972c707103b"></a><!-- doxytag: member="ray::Light::getName" ref="a7af1b7b01ea63eb390809972c707103b" args="()" -->
-std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abec2c34ff5a0d71c0698bc8f26cc07e2"></a><!-- doxytag: member="ray::Light::getName" ref="abec2c34ff5a0d71c0698bc8f26cc07e2" args="() const " -->
-const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aafe4f94c6908d6e95dd138633be1380a"></a><!-- doxytag: member="ray::Light::isOmnidirectional" ref="aafe4f94c6908d6e95dd138633be1380a" args="() const " -->
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isOmnidirectional</b> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5715ef42e2c04d0f8d28dfbb33d116f0"></a><!-- doxytag: member="ray::Light::isDirectional" ref="a5715ef42e2c04d0f8d28dfbb33d116f0" args="() const " -->
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isDirectional</b> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_light.html#a7f6bce92ece66c86ce72c777dc078a6b">Light</a> (const std::string &amp;name=&quot;unnamed_light&quot;)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_light.html#a801dd42c4f76222f6a19fa8e2a50b0b4">Light</a> (const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;pos, const std::string &amp;name=&quot;unnamed_light&quot;)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_light.html#a82bd8cce513d52e84032f1c71e9bafe2">Light</a> (const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;pos, const <a class="el" href="classmath_1_1_vec4f.html">math::Vec4</a> &amp;color, const std::string &amp;name=&quot;unnamed_light&quot;)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad0e59fad13bb6cfadc25b2c477e9ddc7"></a><!-- doxytag: member="ray::Light::~Light" ref="ad0e59fad13bb6cfadc25b2c477e9ddc7" args="()" -->
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_light.html#ad0e59fad13bb6cfadc25b2c477e9ddc7">~Light</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">dtor <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_light.html#adefb4ede39308f8a9c4fa967895564ac">setColor</a> (const <a class="el" href="classmath_1_1_vec4f.html">math::Vec4</a> &amp;color)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmath_1_1_vec4f.html">math::Vec4</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_light.html#ae26a502f75ef94e2213e8921df29f005">getColor</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmath_1_1_vec4f.html">math::Vec4</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_light.html#a77021396d05cf48f1f411f974e049fd2">getColor</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_light.html#a3382f520d535af9c0683b1f9a47e2521">setTransparency</a> (float alpha)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_light.html#aae6807deb98299984212e2d1adf0a3bd">getTransparency</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_light.html#ade7ffac220153270e566a42f368efc58">setPosition</a> (const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;position)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_light.html#a1db9387fb99627a04756a32f33d0a47a">getPosition</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_light.html#a47ead687fd757229f06af7a45d6c6115">getPosition</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_light.html#adf88905583e3f3871700e004e9a04c47">setDirection</a> (const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;normal)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_light.html#a27d909595aa6a42ffc84c7d5917fb20d">getDirection</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_light.html#ad79386cb4d11c0b3c05023c7613f7a75">getDirection</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_light.html#a087fe95bc22ae5d73d8666d4d82f8b80">setName</a> (const std::string &amp;name)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_light.html#a7af1b7b01ea63eb390809972c707103b">getName</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_light.html#abec2c34ff5a0d71c0698bc8f26cc07e2">getName</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_light.html#ac92739f21dd87a5a4e9c106dd7b2ec52">intersect</a> (const <a class="el" href="classray_1_1_ray.html">Ray</a> &amp;r, <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;point, float &amp;dist) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad4f6707f9ff2cc5658640afd535af4f1"></a><!-- doxytag: member="ray::Light::getType" ref="ad4f6707f9ff2cc5658640afd535af4f1" args="() const " -->
-TYPE&#160;</td><td class="memItemRight" valign="bottom"><b>getType</b> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af349c87f5280d3e5900426881b0f3614"></a><!-- doxytag: member="ray::Light::setType" ref="af349c87f5280d3e5900426881b0f3614" args="(TYPE t)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setType</b> (TYPE t)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad0d445cc0e2088397203f3ab6c8582c8"></a><!-- doxytag: member="ray::Light::getIntensity" ref="ad0d445cc0e2088397203f3ab6c8582c8" args="() const " -->
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getIntensity</b> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8d5ed792b4fe855ee89f61e0794398ef"></a><!-- doxytag: member="ray::Light::setIntensity" ref="a8d5ed792b4fe855ee89f61e0794398ef" args="(float intensity)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setIntensity</b> (float intensity)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classray_1_1_light.html#a433d9b2018ef1eaa6b343d8bf987c3b9">TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_light.html#ad4f6707f9ff2cc5658640afd535af4f1">getType</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_light.html#af349c87f5280d3e5900426881b0f3614">setType</a> (<a class="el" href="classray_1_1_light.html#a433d9b2018ef1eaa6b343d8bf987c3b9">TYPE</a> t)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_light.html#ad0d445cc0e2088397203f3ab6c8582c8">getIntensity</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_light.html#a8d5ed792b4fe855ee89f61e0794398ef">setIntensity</a> (float intensity)</td></tr>
 </table>
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>a light source for the scene </p>
+<p>class describes various light sources and their properties </p>
+</div><hr/><h2>Member Enumeration Documentation</h2>
+<a class="anchor" id="a433d9b2018ef1eaa6b343d8bf987c3b9"></a><!-- doxytag: member="ray::Light::TYPE" ref="a433d9b2018ef1eaa6b343d8bf987c3b9" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classray_1_1_light.html#a433d9b2018ef1eaa6b343d8bf987c3b9">ray::Light::TYPE</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>enum with all available types </p>
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="a433d9b2018ef1eaa6b343d8bf987c3b9a401c4a6e791336dbee76eb61bc8d0a78"></a><!-- doxytag: member="DIRECTIONAL" ref="a433d9b2018ef1eaa6b343d8bf987c3b9a401c4a6e791336dbee76eb61bc8d0a78" args="" -->DIRECTIONAL</em>&nbsp;</td><td>
+<p>this light hits every surface from the same direction </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a433d9b2018ef1eaa6b343d8bf987c3b9ad8b2a9dd3719926228bc2bec1636b742"></a><!-- doxytag: member="POINT" ref="a433d9b2018ef1eaa6b343d8bf987c3b9ad8b2a9dd3719926228bc2bec1636b742" args="" -->POINT</em>&nbsp;</td><td>
+<p>an omnidirectional point light source, casts shadows and decays with distance </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a433d9b2018ef1eaa6b343d8bf987c3b9aa09b63bebdd84b46fddd320c9f9a862b"></a><!-- doxytag: member="SPOT" ref="a433d9b2018ef1eaa6b343d8bf987c3b9aa09b63bebdd84b46fddd320c9f9a862b" args="" -->SPOT</em>&nbsp;</td><td>
+<p>a spot light which casts shadows, decays and has a given light cone </p>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+</div>
+</div>
+<hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a7f6bce92ece66c86ce72c777dc078a6b"></a><!-- doxytag: member="ray::Light::Light" ref="a7f6bce92ece66c86ce72c777dc078a6b" args="(const std::string &amp;name=&quot;unnamed_light&quot;)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Light::Light </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em> = <code>&quot;unnamed_light&quot;</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>ctor </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>the name of the light </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a801dd42c4f76222f6a19fa8e2a50b0b4"></a><!-- doxytag: member="ray::Light::Light" ref="a801dd42c4f76222f6a19fa8e2a50b0b4" args="(const math::Vec3 &amp;pos, const std::string &amp;name=&quot;unnamed_light&quot;)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Light::Light </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em> = <code>&quot;unnamed_light&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>ctor </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>the position of the light source </td></tr>
+    <tr><td class="paramname">name</td><td>the name of the light </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a82bd8cce513d52e84032f1c71e9bafe2"></a><!-- doxytag: member="ray::Light::Light" ref="a82bd8cce513d52e84032f1c71e9bafe2" args="(const math::Vec3 &amp;pos, const math::Vec4 &amp;color, const std::string &amp;name=&quot;unnamed_light&quot;)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Light::Light </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classmath_1_1_vec4f.html">math::Vec4</a> &amp;&#160;</td>
+          <td class="paramname"><em>color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em> = <code>&quot;unnamed_light&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>ctor </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>the position of the light source </td></tr>
+    <tr><td class="paramname">color</td><td>the color of the light source </td></tr>
+    <tr><td class="paramname">name</td><td>the name of the light </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="ae26a502f75ef94e2213e8921df29f005"></a><!-- doxytag: member="ray::Light::getColor" ref="ae26a502f75ef94e2213e8921df29f005" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmath_1_1_vec4f.html">math::Vec4</a>&amp; ray::Light::getColor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>get a current color for this light source </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the current color </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a77021396d05cf48f1f411f974e049fd2"></a><!-- doxytag: member="ray::Light::getColor" ref="a77021396d05cf48f1f411f974e049fd2" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classmath_1_1_vec4f.html">math::Vec4</a>&amp; ray::Light::getColor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>get a current color for this light source - const version </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the current color </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a27d909595aa6a42ffc84c7d5917fb20d"></a><!-- doxytag: member="ray::Light::getDirection" ref="a27d909595aa6a42ffc84c7d5917fb20d" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; ray::Light::getDirection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>get a current direction for this light source </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the current direction </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad79386cb4d11c0b3c05023c7613f7a75"></a><!-- doxytag: member="ray::Light::getDirection" ref="ad79386cb4d11c0b3c05023c7613f7a75" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; ray::Light::getDirection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>get a current direction for this light source - const version </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the current direction </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad0d445cc0e2088397203f3ab6c8582c8"></a><!-- doxytag: member="ray::Light::getIntensity" ref="ad0d445cc0e2088397203f3ab6c8582c8" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ray::Light::getIntensity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>get the intensity of the light source </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the intensity of the light source </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7af1b7b01ea63eb390809972c707103b"></a><!-- doxytag: member="ray::Light::getName" ref="a7af1b7b01ea63eb390809972c707103b" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string&amp; ray::Light::getName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>get a current name for this light source </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the current name </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="abec2c34ff5a0d71c0698bc8f26cc07e2"></a><!-- doxytag: member="ray::Light::getName" ref="abec2c34ff5a0d71c0698bc8f26cc07e2" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; ray::Light::getName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>get a current name for this light source - const version </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the current name </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a47ead687fd757229f06af7a45d6c6115"></a><!-- doxytag: member="ray::Light::getPosition" ref="a47ead687fd757229f06af7a45d6c6115" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; ray::Light::getPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>get a current position for this light source - const version </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the current position </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1db9387fb99627a04756a32f33d0a47a"></a><!-- doxytag: member="ray::Light::getPosition" ref="a1db9387fb99627a04756a32f33d0a47a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; ray::Light::getPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>get a current position for this light source </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the current position </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aae6807deb98299984212e2d1adf0a3bd"></a><!-- doxytag: member="ray::Light::getTransparency" ref="aae6807deb98299984212e2d1adf0a3bd" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ray::Light::getTransparency </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>get the current transparency for this light source <br/>
+ as of now, this is meaningless </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the current transparency </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad4f6707f9ff2cc5658640afd535af4f1"></a><!-- doxytag: member="ray::Light::getType" ref="ad4f6707f9ff2cc5658640afd535af4f1" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classray_1_1_light.html#a433d9b2018ef1eaa6b343d8bf987c3b9">TYPE</a> ray::Light::getType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>get the TYPE of the light source </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the type of the light source </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="ac92739f21dd87a5a4e9c106dd7b2ec52"></a><!-- doxytag: member="ray::Light::intersect" ref="ac92739f21dd87a5a4e9c106dd7b2ec52" args="(const Ray &amp;r, math::Vec3 &amp;point, float &amp;dist) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -188,19 +505,178 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setIntensity</b> (flo
       </table>
 </div>
 <div class="memdoc">
-<p>abstract interface for intersectable objects <br/>
- test if the given ray intersects this object </p>
+<p>reimplemented from <a class="el" href="classray_1_1_i_intersectable.html">IIntersectable</a> </p>
+
+<p>Implements <a class="el" href="classray_1_1_i_intersectable.html#a27d7428b980ea9199361fe77c01dad9b">ray::IIntersectable</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adefb4ede39308f8a9c4fa967895564ac"></a><!-- doxytag: member="ray::Light::setColor" ref="adefb4ede39308f8a9c4fa967895564ac" args="(const math::Vec4 &amp;color)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ray::Light::setColor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmath_1_1_vec4f.html">math::Vec4</a> &amp;&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>set a new color for this light source </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">r</td><td>the incoming ray </td></tr>
-    <tr><td class="paramname">point</td><td>output parameter - if there is any intersection, the point of intersection on the surface of the object will be returned through this reference </td></tr>
-    <tr><td class="paramname">dist</td><td>output parameter - if there is any intersection, the distance from the origin of the ray to the intersection will be returned via this parameter </td></tr>
+    <tr><td class="paramname">color</td><td>the new color </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>true if any intersection occurs </dd></dl>
 
-<p>Implements <a class="el" href="classray_1_1_i_intersectable.html#a27d7428b980ea9199361fe77c01dad9b">ray::IIntersectable</a>.</p>
+</div>
+</div>
+<a class="anchor" id="adf88905583e3f3871700e004e9a04c47"></a><!-- doxytag: member="ray::Light::setDirection" ref="adf88905583e3f3871700e004e9a04c47" args="(const math::Vec3 &amp;normal)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ray::Light::setDirection </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;&#160;</td>
+          <td class="paramname"><em>normal</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>set a new direction for this light source </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">normal</td><td>the new direction </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a8d5ed792b4fe855ee89f61e0794398ef"></a><!-- doxytag: member="ray::Light::setIntensity" ref="a8d5ed792b4fe855ee89f61e0794398ef" args="(float intensity)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ray::Light::setIntensity </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>intensity</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>set the intensity of the light source </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">intensity</td><td>the new intensity of the light source </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a087fe95bc22ae5d73d8666d4d82f8b80"></a><!-- doxytag: member="ray::Light::setName" ref="a087fe95bc22ae5d73d8666d4d82f8b80" args="(const std::string &amp;name)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ray::Light::setName </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>set a new name for this light source </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>the new name </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ade7ffac220153270e566a42f368efc58"></a><!-- doxytag: member="ray::Light::setPosition" ref="ade7ffac220153270e566a42f368efc58" args="(const math::Vec3 &amp;position)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ray::Light::setPosition </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>set a new position for this light source </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>the new position </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3382f520d535af9c0683b1f9a47e2521"></a><!-- doxytag: member="ray::Light::setTransparency" ref="a3382f520d535af9c0683b1f9a47e2521" args="(float alpha)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ray::Light::setTransparency </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>alpha</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>set a new transparency for this light source <br/>
+ as of now, this is meaningless </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">alpha</td><td>the new transparency </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af349c87f5280d3e5900426881b0f3614"></a><!-- doxytag: member="ray::Light::setType" ref="af349c87f5280d3e5900426881b0f3614" args="(TYPE t)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ray::Light::setType </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classray_1_1_light.html#a433d9b2018ef1eaa6b343d8bf987c3b9">TYPE</a>&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>set the TYPE of the light source </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t</td><td>the new type of the light source </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -214,7 +690,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setIntensity</b> (flo
     <ul>
       <li class="navelem"><b>ray</b>      </li>
       <li class="navelem"><a class="el" href="classray_1_1_light.html">Light</a>      </li>
-      <li class="footer">Generated on Thu Apr 14 2011 17:23:18 for rtracer by&#160;
+      <li class="footer">Generated on Fri Apr 15 2011 16:50:50 for rtracer by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>
@@ -224,7 +700,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setIntensity</b> (flo
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">

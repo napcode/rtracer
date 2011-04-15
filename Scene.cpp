@@ -106,10 +106,17 @@ void Scene::createLights()
     _lights.push_back(l1);
 
     // point light
-    l1 = new Light(Vec3(-8.0f, 0.0f, 10.0f));
+    l1 = new Light(Vec3(-5.0f, 0.0f, 10.0f));
     l1->setIntensity(5.0f);
     l1->setColor(Vec4(1.0f, 1.0f, 1.0f, 1.0f));
     l1->setType(Light::POINT);
     l1->setName("L2");
+    _lights.push_back(l1);
+
+    l1 = new Light(Vec3(3.0f, 0.0f, 10.0f));
+    l1->setIntensity(2.0f);
+    l1->setColor(Vec4(1.0f, 0.8, 0.8f, 1.0f));
+    l1->setType(Light::POINT);
+    l1->setName("L3");
     _lights.push_back(l1);
 }

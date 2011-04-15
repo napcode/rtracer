@@ -106,44 +106,45 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00024"></a>00024 
 <a name="l00025"></a>00025 <span class="keyword">namespace </span>ray
 <a name="l00026"></a>00026 {
-<a name="l00027"></a><a class="code" href="classray_1_1_plane.html">00027</a>     <span class="keyword">class </span><a class="code" href="classray_1_1_plane.html">Plane</a> : <span class="keyword">public</span> <a class="code" href="classray_1_1_drawable.html">Drawable</a>
-<a name="l00028"></a>00028     {
-<a name="l00029"></a>00029         <span class="keyword">public</span>:
-<a name="l00030"></a>00030             <a class="code" href="classray_1_1_plane.html">Plane</a>();
-<a name="l00031"></a>00031             <a class="code" href="classray_1_1_plane.html">Plane</a>(<span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; normal, <span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; position);
-<a name="l00032"></a>00032             <a class="code" href="classray_1_1_plane.html">Plane</a>(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; normal, <span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; position);
-<a name="l00033"></a>00033 
-<a name="l00034"></a>00034             <span class="keywordtype">void</span> setNormal(<span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; normal);
-<a name="l00035"></a>00035             <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; getNormal();
-<a name="l00036"></a>00036             <span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; getNormal()  <span class="keyword">const</span>;
-<a name="l00037"></a>00037 
-<a name="l00038"></a>00038             <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a> <a class="code" href="classray_1_1_plane.html#aa37a495c80497623905f9b66c65c8a07">getNormalAt</a>(<span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; at = 0) <span class="keyword">const</span>;
-<a name="l00039"></a>00039             <a class="code" href="classmath_1_1_vec4f.html">math::Vec4</a> <a class="code" href="classray_1_1_plane.html#a77339067c07c106272673e45ea1c0774">getColorAt</a>(<span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; at = 0) <span class="keyword">const</span>;
-<a name="l00040"></a>00040 
-<a name="l00041"></a>00041             <span class="keywordtype">void</span> setPosition(<span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; position);
-<a name="l00042"></a>00042             <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; getPosition();
-<a name="l00043"></a>00043             <span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; getPosition() <span class="keyword">const</span>;
-<a name="l00044"></a>00044 
-<a name="l00045"></a>00045             <span class="keywordtype">bool</span> <a class="code" href="classray_1_1_plane.html#a0f921c27b3b6e7aea97105a60c366e42">intersect</a>(<span class="keyword">const</span> <a class="code" href="classray_1_1_ray.html">Ray</a>&amp; r, <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; point, <span class="keywordtype">float</span> &amp;dist) <span class="keyword">const</span>;
-<a name="l00046"></a><a class="code" href="classray_1_1_plane.html#a496276407632071877020674079ec4fb">00046</a>             <span class="keywordtype">bool</span> <a class="code" href="classray_1_1_plane.html#a496276407632071877020674079ec4fb">isSphere</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <span class="keyword">false</span>;};
-<a name="l00047"></a><a class="code" href="classray_1_1_plane.html#a3cb75b6f62f1e5ba0d2bc69b32be9c67">00047</a>             <span class="keywordtype">bool</span> <a class="code" href="classray_1_1_plane.html#a3cb75b6f62f1e5ba0d2bc69b32be9c67">isBox</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <span class="keyword">false</span>;};
-<a name="l00048"></a><a class="code" href="classray_1_1_plane.html#a381c9992ede2149cd56f7e558b6b307b">00048</a>             <span class="keywordtype">bool</span> <a class="code" href="classray_1_1_plane.html#a381c9992ede2149cd56f7e558b6b307b">isPlane</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <span class="keyword">true</span>;};
-<a name="l00049"></a>00049         <span class="keyword">private</span>:
-<a name="l00050"></a>00050             <span class="keywordtype">void</span> prepare();
-<a name="l00051"></a>00051             <a class="code" href="classmath_1_1_vec3f.html">math::Vec3f</a> _normal;
-<a name="l00052"></a>00052             <a class="code" href="classmath_1_1_vec3f.html">math::Vec3f</a> _position;
-<a name="l00053"></a>00053             <a class="code" href="classmath_1_1_vec3f.html">math::Vec3f</a> _u_axis;
-<a name="l00054"></a>00054             <a class="code" href="classmath_1_1_vec3f.html">math::Vec3f</a> _v_axis;
-<a name="l00055"></a>00055 
-<a name="l00056"></a>00056     };
-<a name="l00057"></a>00057 }
-<a name="l00058"></a>00058 <span class="preprocessor">#endif</span>
+<a name="l00030"></a><a class="code" href="classray_1_1_plane.html">00030</a>     <span class="keyword">class </span><a class="code" href="classray_1_1_plane.html">Plane</a> : <span class="keyword">public</span> <a class="code" href="classray_1_1_drawable.html">Drawable</a>
+<a name="l00031"></a>00031     {
+<a name="l00032"></a>00032         <span class="keyword">public</span>:
+<a name="l00034"></a>00034             <a class="code" href="classray_1_1_plane.html#acac0d9c003e0ab10d07b146c3566a0c7" title="ctor">Plane</a>();
+<a name="l00040"></a>00040             <a class="code" href="classray_1_1_plane.html#acac0d9c003e0ab10d07b146c3566a0c7" title="ctor">Plane</a>(<span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; normal, <span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; position);
+<a name="l00047"></a>00047             <a class="code" href="classray_1_1_plane.html#acac0d9c003e0ab10d07b146c3566a0c7" title="ctor">Plane</a>(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; normal, <span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; position);
+<a name="l00048"></a>00048 
+<a name="l00053"></a>00053             <span class="keywordtype">void</span> <a class="code" href="classray_1_1_plane.html#ade787ea959bceb4a6667bd854bcb2dd9">setNormal</a>(<span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; normal);
+<a name="l00058"></a>00058             <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; <a class="code" href="classray_1_1_plane.html#a8bd7c5327f6467b7a3ac442bd55947a8">getNormal</a>();
+<a name="l00063"></a>00063             <span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; <a class="code" href="classray_1_1_plane.html#a8bd7c5327f6467b7a3ac442bd55947a8">getNormal</a>()  <span class="keyword">const</span>;
+<a name="l00064"></a>00064 
+<a name="l00068"></a>00068             <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a> <a class="code" href="classray_1_1_plane.html#aa37a495c80497623905f9b66c65c8a07">getNormalAt</a>(<span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; at = 0) <span class="keyword">const</span>;
+<a name="l00072"></a>00072             <a class="code" href="classmath_1_1_vec4f.html">math::Vec4</a> <a class="code" href="classray_1_1_plane.html#a77339067c07c106272673e45ea1c0774">getColorAt</a>(<span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; at = 0) <span class="keyword">const</span>;
+<a name="l00073"></a>00073 
+<a name="l00078"></a>00078             <span class="keywordtype">void</span> <a class="code" href="classray_1_1_plane.html#aca8ee21dbc69135e21d497eace21f8d6">setPosition</a>(<span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; position);
+<a name="l00083"></a>00083             <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; <a class="code" href="classray_1_1_plane.html#a120b89428e03b3712599e1b07505fed0">getPosition</a>();
+<a name="l00088"></a>00088             <span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; <a class="code" href="classray_1_1_plane.html#a120b89428e03b3712599e1b07505fed0">getPosition</a>() <span class="keyword">const</span>;
+<a name="l00089"></a>00089 
+<a name="l00093"></a>00093             <span class="keywordtype">bool</span> <a class="code" href="classray_1_1_plane.html#a0f921c27b3b6e7aea97105a60c366e42">intersect</a>(<span class="keyword">const</span> <a class="code" href="classray_1_1_ray.html">Ray</a>&amp; r, <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; point, <span class="keywordtype">float</span> &amp;dist) <span class="keyword">const</span>;
+<a name="l00094"></a>00094 
+<a name="l00098"></a><a class="code" href="classray_1_1_plane.html#a496276407632071877020674079ec4fb">00098</a>             <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classray_1_1_plane.html#a496276407632071877020674079ec4fb">isSphere</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <span class="keyword">false</span>;};
+<a name="l00102"></a><a class="code" href="classray_1_1_plane.html#a3cb75b6f62f1e5ba0d2bc69b32be9c67">00102</a>             <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classray_1_1_plane.html#a3cb75b6f62f1e5ba0d2bc69b32be9c67">isBox</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <span class="keyword">false</span>;};
+<a name="l00106"></a><a class="code" href="classray_1_1_plane.html#a381c9992ede2149cd56f7e558b6b307b">00106</a>             <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classray_1_1_plane.html#a381c9992ede2149cd56f7e558b6b307b">isPlane</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <span class="keyword">true</span>;};
+<a name="l00107"></a>00107         <span class="keyword">private</span>:
+<a name="l00108"></a>00108             <span class="keywordtype">void</span> prepare();
+<a name="l00109"></a>00109             <a class="code" href="classmath_1_1_vec3f.html">math::Vec3f</a> _normal;
+<a name="l00110"></a>00110             <a class="code" href="classmath_1_1_vec3f.html">math::Vec3f</a> _position;
+<a name="l00111"></a>00111             <a class="code" href="classmath_1_1_vec3f.html">math::Vec3f</a> _u_axis;
+<a name="l00112"></a>00112             <a class="code" href="classmath_1_1_vec3f.html">math::Vec3f</a> _v_axis;
+<a name="l00113"></a>00113 
+<a name="l00114"></a>00114     };
+<a name="l00115"></a>00115 }
+<a name="l00116"></a>00116 <span class="preprocessor">#endif</span>
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><b>Plane.h</b>      </li>
-      <li class="footer">Generated on Thu Apr 14 2011 17:23:18 for rtracer by&#160;
+      <li class="footer">Generated on Fri Apr 15 2011 16:50:50 for rtracer by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>
@@ -153,7 +154,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">

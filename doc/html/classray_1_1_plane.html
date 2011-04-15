@@ -85,7 +85,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">ray::Plane Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="ray::Plane" --><!-- doxytag: inherits="ray::Drawable" --><div class="dynheader">
+<!-- doxytag: class="ray::Plane" --><!-- doxytag: inherits="ray::Drawable" -->
+<p><code>#include &lt;<a class="el" href="_plane_8h_source.html">Plane.h</a>&gt;</code></p>
+<div class="dynheader">
 Inheritance diagram for ray::Plane:</div>
 <div class="dyncontent">
 <div class="center"><img src="classray_1_1_plane__inherit__graph.png" border="0" usemap="#ray_1_1_plane_inherit__map" alt="Inheritance graph"/></div>
@@ -97,36 +99,111 @@ Collaboration diagram for ray::Plane:</div>
 <div class="dyncontent">
 <div class="center"><img src="classray_1_1_plane__coll__graph.png" border="0" usemap="#ray_1_1_plane_coll__map" alt="Collaboration graph"/></div>
 <map name="ray_1_1_plane_coll__map" id="ray_1_1_plane_coll__map">
-<area shape="rect" id="node2" href="classray_1_1_drawable.html" title="ray::Drawable" alt="" coords="40,213,147,243"/><area shape="rect" id="node4" href="classray_1_1_i_intersectable.html" title="ray::IIntersectable" alt="" coords="5,117,139,147"/><area shape="rect" id="node6" href="classray_1_1_material.html" title="ray::Material" alt="" coords="163,117,261,147"/><area shape="rect" id="node8" href="classray_1_1_texture.html" title="ray::Texture" alt="" coords="165,5,259,35"/><area shape="rect" id="node10" href="classmath_1_1_vec3f.html" title="math::Vec3f" alt="" coords="171,213,269,243"/></map>
+<area shape="rect" id="node2" href="classray_1_1_drawable.html" title="ray::Drawable" alt="" coords="40,213,147,243"/><area shape="rect" id="node4" href="classray_1_1_i_intersectable.html" title="ray::IIntersectable" alt="" coords="5,117,139,147"/><area shape="rect" id="node6" href="classray_1_1_material.html" title="this holds all material properties This holds all material properties. It can be reused by multiple d..." alt="" coords="163,117,261,147"/><area shape="rect" id="node8" href="classray_1_1_texture.html" title="a texture class stores all data needed for texturing" alt="" coords="165,5,259,35"/><area shape="rect" id="node10" href="classmath_1_1_vec3f.html" title="math::Vec3f" alt="" coords="171,213,269,243"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="classray_1_1_plane-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a841ff2b78d564ab4d1791a0d35aa8afd"></a><!-- doxytag: member="ray::Plane::Plane" ref="a841ff2b78d564ab4d1791a0d35aa8afd" args="(const math::Vec3 &amp;normal, const math::Vec3 &amp;position)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><b>Plane</b> (const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;normal, const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;position)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9dcc4139db102e537c953ae9ca941378"></a><!-- doxytag: member="ray::Plane::Plane" ref="a9dcc4139db102e537c953ae9ca941378" args="(const std::string &amp;name, const math::Vec3 &amp;normal, const math::Vec3 &amp;position)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><b>Plane</b> (const std::string &amp;name, const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;normal, const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;position)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade787ea959bceb4a6667bd854bcb2dd9"></a><!-- doxytag: member="ray::Plane::setNormal" ref="ade787ea959bceb4a6667bd854bcb2dd9" args="(const math::Vec3 &amp;normal)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setNormal</b> (const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;normal)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8bd7c5327f6467b7a3ac442bd55947a8"></a><!-- doxytag: member="ray::Plane::getNormal" ref="a8bd7c5327f6467b7a3ac442bd55947a8" args="()" -->
-<a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getNormal</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa37d0e46b4d0d92256eba55434975338"></a><!-- doxytag: member="ray::Plane::getNormal" ref="aa37d0e46b4d0d92256eba55434975338" args="() const " -->
-const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getNormal</b> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acac0d9c003e0ab10d07b146c3566a0c7"></a><!-- doxytag: member="ray::Plane::Plane" ref="acac0d9c003e0ab10d07b146c3566a0c7" args="()" -->
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_plane.html#acac0d9c003e0ab10d07b146c3566a0c7">Plane</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ctor <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_plane.html#a841ff2b78d564ab4d1791a0d35aa8afd">Plane</a> (const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;normal, const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;position)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_plane.html#a9dcc4139db102e537c953ae9ca941378">Plane</a> (const std::string &amp;name, const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;normal, const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;position)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_plane.html#ade787ea959bceb4a6667bd854bcb2dd9">setNormal</a> (const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;normal)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_plane.html#a8bd7c5327f6467b7a3ac442bd55947a8">getNormal</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_plane.html#aa37d0e46b4d0d92256eba55434975338">getNormal</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_plane.html#aa37a495c80497623905f9b66c65c8a07">getNormalAt</a> (const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;at=0) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmath_1_1_vec4f.html">math::Vec4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_plane.html#a77339067c07c106272673e45ea1c0774">getColorAt</a> (const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;at=0) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca8ee21dbc69135e21d497eace21f8d6"></a><!-- doxytag: member="ray::Plane::setPosition" ref="aca8ee21dbc69135e21d497eace21f8d6" args="(const math::Vec3 &amp;position)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setPosition</b> (const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;position)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a120b89428e03b3712599e1b07505fed0"></a><!-- doxytag: member="ray::Plane::getPosition" ref="a120b89428e03b3712599e1b07505fed0" args="()" -->
-<a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getPosition</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9184ccaad08cc6073a79821fec9667a8"></a><!-- doxytag: member="ray::Plane::getPosition" ref="a9184ccaad08cc6073a79821fec9667a8" args="() const " -->
-const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getPosition</b> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_plane.html#aca8ee21dbc69135e21d497eace21f8d6">setPosition</a> (const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;position)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_plane.html#a120b89428e03b3712599e1b07505fed0">getPosition</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_plane.html#a9184ccaad08cc6073a79821fec9667a8">getPosition</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_plane.html#a0f921c27b3b6e7aea97105a60c366e42">intersect</a> (const <a class="el" href="classray_1_1_ray.html">Ray</a> &amp;r, <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;point, float &amp;dist) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_plane.html#a496276407632071877020674079ec4fb">isSphere</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_plane.html#a3cb75b6f62f1e5ba0d2bc69b32be9c67">isBox</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_plane.html#a381c9992ede2149cd56f7e558b6b307b">isPlane</a> () const </td></tr>
 </table>
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>a drawable plane </p>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a841ff2b78d564ab4d1791a0d35aa8afd"></a><!-- doxytag: member="ray::Plane::Plane" ref="a841ff2b78d564ab4d1791a0d35aa8afd" args="(const math::Vec3 &amp;normal, const math::Vec3 &amp;position)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Plane::Plane </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;&#160;</td>
+          <td class="paramname"><em>normal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>ctor </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">normal</td><td>the normal vector of the plane </td></tr>
+    <tr><td class="paramname">position</td><td>the position vector of the plane </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a9dcc4139db102e537c953ae9ca941378"></a><!-- doxytag: member="ray::Plane::Plane" ref="a9dcc4139db102e537c953ae9ca941378" args="(const std::string &amp;name, const math::Vec3 &amp;normal, const math::Vec3 &amp;position)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Plane::Plane </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;&#160;</td>
+          <td class="paramname"><em>normal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>ctor </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>the name of the plane </td></tr>
+    <tr><td class="paramname">normal</td><td>the normal vector of the plane </td></tr>
+    <tr><td class="paramname">position</td><td>the position vector of the plane </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a77339067c07c106272673e45ea1c0774"></a><!-- doxytag: member="ray::Plane::getColorAt" ref="a77339067c07c106272673e45ea1c0774" args="(const math::Vec3 &amp;at=0) const " -->
 <div class="memitem">
@@ -142,16 +219,45 @@ const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;&#160;</
       </table>
 </div>
 <div class="memdoc">
-<p>get the color on the surface of the sphere at a given position </p>
-<dl><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">at</td><td>the position where the color sample shall be taken </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>the color vector </dd></dl>
+<p>reimplemented from <a class="el" href="classray_1_1_drawable.html">Drawable</a> </p>
 
 <p>Implements <a class="el" href="classray_1_1_drawable.html#a7f341f821b357ed7b13dc1f8fd3fc382">ray::Drawable</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8bd7c5327f6467b7a3ac442bd55947a8"></a><!-- doxytag: member="ray::Plane::getNormal" ref="a8bd7c5327f6467b7a3ac442bd55947a8" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmath_1_1_vec3f.html">Vec3</a> &amp; Plane::getNormal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>get the normal vector of the plane </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>a reference to the normal vector </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa37d0e46b4d0d92256eba55434975338"></a><!-- doxytag: member="ray::Plane::getNormal" ref="aa37d0e46b4d0d92256eba55434975338" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classmath_1_1_vec3f.html">Vec3</a> &amp; Plane::getNormal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>get the normal vector of the plane - const variant </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>a reference to the normal vector </dd></dl>
 
 </div>
 </div>
@@ -169,16 +275,45 @@ const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;&#160;</
       </table>
 </div>
 <div class="memdoc">
-<p>get the normal on the surface of the sphere at a given position </p>
-<dl><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">at</td><td>the position of the normal </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>the normal vector </dd></dl>
+<p>reimplemented from <a class="el" href="classray_1_1_drawable.html">Drawable</a> </p>
 
 <p>Implements <a class="el" href="classray_1_1_drawable.html#a5d02da5f716c8c1a2ec58f71ae679eab">ray::Drawable</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9184ccaad08cc6073a79821fec9667a8"></a><!-- doxytag: member="ray::Plane::getPosition" ref="a9184ccaad08cc6073a79821fec9667a8" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classmath_1_1_vec3f.html">Vec3</a> &amp; Plane::getPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>get the position vector of the plane - const version </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>a reference to the position vector </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a120b89428e03b3712599e1b07505fed0"></a><!-- doxytag: member="ray::Plane::getPosition" ref="a120b89428e03b3712599e1b07505fed0" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmath_1_1_vec3f.html">Vec3</a> &amp; Plane::getPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>get the position vector of the plane </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>a reference to the position vector </dd></dl>
 
 </div>
 </div>
@@ -212,17 +347,7 @@ const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;&#160;</
       </table>
 </div>
 <div class="memdoc">
-<p>abstract interface for intersectable objects <br/>
- test if the given ray intersects this object </p>
-<dl><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">r</td><td>the incoming ray </td></tr>
-    <tr><td class="paramname">point</td><td>output parameter - if there is any intersection, the point of intersection on the surface of the object will be returned through this reference </td></tr>
-    <tr><td class="paramname">dist</td><td>output parameter - if there is any intersection, the distance from the origin of the ray to the intersection will be returned via this parameter </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>true if any intersection occurs </dd></dl>
+<p>reimplemented from <a class="el" href="classray_1_1_i_intersectable.html">IIntersectable</a> </p>
 
 <p>Implements <a class="el" href="classray_1_1_i_intersectable.html#a27d7428b980ea9199361fe77c01dad9b">ray::IIntersectable</a>.</p>
 
@@ -241,8 +366,7 @@ const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;&#160;</
       </table>
 </div>
 <div class="memdoc">
-<p>checks if this drawable is a <a class="el" href="classray_1_1_box.html">Box</a> </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>true if <a class="el" href="classray_1_1_drawable.html">Drawable</a> is an instance <a class="el" href="classray_1_1_box.html">Box</a> </dd></dl>
+<p>reimplemented from <a class="el" href="classray_1_1_drawable.html">Drawable</a> </p>
 
 <p>Implements <a class="el" href="classray_1_1_drawable.html#a4f8312011c9f31275a8040f23dcc630e">ray::Drawable</a>.</p>
 
@@ -261,8 +385,7 @@ const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;&#160;</
       </table>
 </div>
 <div class="memdoc">
-<p>checks if this drawable is a <a class="el" href="classray_1_1_plane.html">Plane</a> </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>true if <a class="el" href="classray_1_1_drawable.html">Drawable</a> is an instance <a class="el" href="classray_1_1_plane.html">Plane</a> </dd></dl>
+<p>reimplemented from <a class="el" href="classray_1_1_drawable.html">Drawable</a> </p>
 
 <p>Implements <a class="el" href="classray_1_1_drawable.html#aab422c19e4a171d56a780bef4aedd87a">ray::Drawable</a>.</p>
 
@@ -281,10 +404,57 @@ const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;&#160;</
       </table>
 </div>
 <div class="memdoc">
-<p>checks if this drawable is a <a class="el" href="classray_1_1_sphere.html">Sphere</a> </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>true if <a class="el" href="classray_1_1_drawable.html">Drawable</a> is an instance <a class="el" href="classray_1_1_sphere.html">Sphere</a> </dd></dl>
+<p>reimplemented from <a class="el" href="classray_1_1_drawable.html">Drawable</a> </p>
 
 <p>Implements <a class="el" href="classray_1_1_drawable.html#a5452ab859b6792be12e969b6d95021b4">ray::Drawable</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ade787ea959bceb4a6667bd854bcb2dd9"></a><!-- doxytag: member="ray::Plane::setNormal" ref="ade787ea959bceb4a6667bd854bcb2dd9" args="(const math::Vec3 &amp;normal)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Plane::setNormal </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;&#160;</td>
+          <td class="paramname"><em>normal</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>set a new normal vector of the plane </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">normal</td><td>the new normal vector </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aca8ee21dbc69135e21d497eace21f8d6"></a><!-- doxytag: member="ray::Plane::setPosition" ref="aca8ee21dbc69135e21d497eace21f8d6" args="(const math::Vec3 &amp;position)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Plane::setPosition </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>set a new position vector of the plane </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>the new position vector </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -298,7 +468,7 @@ const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;&#160;</
     <ul>
       <li class="navelem"><b>ray</b>      </li>
       <li class="navelem"><a class="el" href="classray_1_1_plane.html">Plane</a>      </li>
-      <li class="footer">Generated on Thu Apr 14 2011 17:23:18 for rtracer by&#160;
+      <li class="footer">Generated on Fri Apr 15 2011 16:50:50 for rtracer by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>
@@ -308,7 +478,7 @@ const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;&#160;</
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">

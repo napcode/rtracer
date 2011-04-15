@@ -1,4 +1,4 @@
 <map id="G" name="G">
-<area shape="rect" id="node2" href="$classray_1_1img_1_1_writer.html" title="ray::img::Writer" alt="" coords="5,5,123,35"/>
+<area shape="rect" id="node2" href="$classray_1_1img_1_1_writer.html" title="writes images to disk" alt="" coords="5,5,123,35"/>
 <area shape="rect" id="node4" href="$classray_1_1img_1_1_reader.html" title="ray::img::Reader" alt="" coords="147,5,272,35"/>
 </map>

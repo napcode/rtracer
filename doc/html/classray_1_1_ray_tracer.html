@@ -85,7 +85,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">ray::RayTracer Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="ray::RayTracer" --><div class="dynheader">
+<!-- doxytag: class="ray::RayTracer" -->
+<p>the main interface to the ray tracer this class implements the actual ray tracer  
+ <a href="classray_1_1_ray_tracer.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_ray_tracer_8h_source.html">RayTracer.h</a>&gt;</code></p>
+<div class="dynheader">
 Collaboration diagram for ray::RayTracer:</div>
 <div class="dyncontent">
 <div class="center"><img src="classray_1_1_ray_tracer__coll__graph.png" border="0" usemap="#ray_1_1_ray_tracer_coll__map" alt="Collaboration graph"/></div>
@@ -97,21 +102,154 @@ Collaboration diagram for ray::RayTracer:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af3fcc6e7bdb7e860011a23e46efe4043"></a><!-- doxytag: member="ray::RayTracer::setScene" ref="af3fcc6e7bdb7e860011a23e46efe4043" args="(Scene &amp;scene)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setScene</b> (<a class="el" href="classray_1_1_scene.html">Scene</a> &amp;scene)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe9858e5de78a222595eaec22fdc04f0"></a><!-- doxytag: member="ray::RayTracer::getScene" ref="afe9858e5de78a222595eaec22fdc04f0" args="() const " -->
-const <a class="el" href="classray_1_1_scene.html">Scene</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getScene</b> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a947567386753e0357cb181889b0d7679"></a><!-- doxytag: member="ray::RayTracer::getScene" ref="a947567386753e0357cb181889b0d7679" args="()" -->
-<a class="el" href="classray_1_1_scene.html">Scene</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getScene</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adcc73d648d34777f5e26d202d9375b10"></a><!-- doxytag: member="ray::RayTracer::prepare" ref="adcc73d648d34777f5e26d202d9375b10" args="()" -->
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>prepare</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a15389a66643e71b6c2e43cd60a69b913"></a><!-- doxytag: member="ray::RayTracer::run" ref="a15389a66643e71b6c2e43cd60a69b913" args="()" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>run</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acca0f99bfc23038f34701ce5feaec172"></a><!-- doxytag: member="ray::RayTracer::getFrameBuffer" ref="acca0f99bfc23038f34701ce5feaec172" args="()" -->
-PixelBuffer &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getFrameBuffer</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3613019d2b74f77be97a46a7f66bd177"></a><!-- doxytag: member="ray::RayTracer::getFrameBuffer" ref="a3613019d2b74f77be97a46a7f66bd177" args="() const " -->
-const PixelBuffer &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getFrameBuffer</b> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f59fcfc6b645680b6c5723df307e6e9"></a><!-- doxytag: member="ray::RayTracer::RayTracer" ref="a7f59fcfc6b645680b6c5723df307e6e9" args="()" -->
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_ray_tracer.html#a7f59fcfc6b645680b6c5723df307e6e9">RayTracer</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ctor <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5b30fead4f47d46be62bddb4a5283e6"></a><!-- doxytag: member="ray::RayTracer::~RayTracer" ref="ab5b30fead4f47d46be62bddb4a5283e6" args="()" -->
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_ray_tracer.html#ab5b30fead4f47d46be62bddb4a5283e6">~RayTracer</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">dtor <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_ray_tracer.html#af3fcc6e7bdb7e860011a23e46efe4043">setScene</a> (<a class="el" href="classray_1_1_scene.html">Scene</a> &amp;scene)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classray_1_1_scene.html">Scene</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_ray_tracer.html#afe9858e5de78a222595eaec22fdc04f0">getScene</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classray_1_1_scene.html">Scene</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_ray_tracer.html#a947567386753e0357cb181889b0d7679">getScene</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_ray_tracer.html#adcc73d648d34777f5e26d202d9375b10">prepare</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_ray_tracer.html#a15389a66643e71b6c2e43cd60a69b913">run</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">PixelBuffer &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_ray_tracer.html#acca0f99bfc23038f34701ce5feaec172">getFrameBuffer</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const PixelBuffer &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_ray_tracer.html#a3613019d2b74f77be97a46a7f66bd177">getFrameBuffer</a> () const </td></tr>
 </table>
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>the main interface to the ray tracer this class implements the actual ray tracer </p>
+</div><hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="acca0f99bfc23038f34701ce5feaec172"></a><!-- doxytag: member="ray::RayTracer::getFrameBuffer" ref="acca0f99bfc23038f34701ce5feaec172" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PixelBuffer&amp; ray::RayTracer::getFrameBuffer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>get the frame buffer of the ray tracer </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>a reference to the pixel buffer </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3613019d2b74f77be97a46a7f66bd177"></a><!-- doxytag: member="ray::RayTracer::getFrameBuffer" ref="a3613019d2b74f77be97a46a7f66bd177" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const PixelBuffer&amp; ray::RayTracer::getFrameBuffer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>get the frame buffer of the ray tracer - const version </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>a reference to the pixel buffer </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a947567386753e0357cb181889b0d7679"></a><!-- doxytag: member="ray::RayTracer::getScene" ref="a947567386753e0357cb181889b0d7679" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classray_1_1_scene.html">Scene</a>&amp; ray::RayTracer::getScene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>retrieve the current <a class="el" href="classray_1_1_scene.html">Scene</a> of the ray tracer </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>a reference to the <a class="el" href="classray_1_1_scene.html">Scene</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afe9858e5de78a222595eaec22fdc04f0"></a><!-- doxytag: member="ray::RayTracer::getScene" ref="afe9858e5de78a222595eaec22fdc04f0" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classray_1_1_scene.html">Scene</a>&amp; ray::RayTracer::getScene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>retrieve the current <a class="el" href="classray_1_1_scene.html">Scene</a> of the ray tracer - const version </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>a reference to the <a class="el" href="classray_1_1_scene.html">Scene</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="adcc73d648d34777f5e26d202d9375b10"></a><!-- doxytag: member="ray::RayTracer::prepare" ref="adcc73d648d34777f5e26d202d9375b10" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RayTracer::prepare </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>prepare the instance to do some work. This sets up the frame buffer to the configured size etc. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true if ray tracer is ready to work </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a15389a66643e71b6c2e43cd60a69b913"></a><!-- doxytag: member="ray::RayTracer::run" ref="a15389a66643e71b6c2e43cd60a69b913" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RayTracer::run </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>fire! </p>
+
+</div>
+</div>
+<a class="anchor" id="af3fcc6e7bdb7e860011a23e46efe4043"></a><!-- doxytag: member="ray::RayTracer::setScene" ref="af3fcc6e7bdb7e860011a23e46efe4043" args="(Scene &amp;scene)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ray::RayTracer::setScene </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classray_1_1_scene.html">Scene</a> &amp;&#160;</td>
+          <td class="paramname"><em>scene</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>attach a <a class="el" href="classray_1_1_scene.html">Scene</a> to the ray tracer </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scene</td><td>a reference to the <a class="el" href="classray_1_1_scene.html">Scene</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_ray_tracer_8h_source.html">RayTracer.h</a></li>
 <li>RayTracer.cpp</li>
@@ -122,7 +260,7 @@ const PixelBuffer &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>ge
     <ul>
       <li class="navelem"><b>ray</b>      </li>
       <li class="navelem"><a class="el" href="classray_1_1_ray_tracer.html">RayTracer</a>      </li>
-      <li class="footer">Generated on Thu Apr 14 2011 17:23:18 for rtracer by&#160;
+      <li class="footer">Generated on Fri Apr 15 2011 16:50:50 for rtracer by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>
@@ -132,7 +270,7 @@ const PixelBuffer &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>ge
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
