@@ -23,4 +23,4 @@ SET(rtracer_SOURCES
         math/Quat.cpp
         )
 ADD_EXECUTABLE(rtracer ${rtracer_SOURCES})
-SET(CMAKE_CXX_FLAGS_DEBUG "-Wextra -Wall -O2")
+SET(CMAKE_CXX_FLAGS_DEBUG "-Wextra -Wall -g -pg -O2")
