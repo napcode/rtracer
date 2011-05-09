@@ -20,7 +20,8 @@
 #define RAY_TEXTURE_H
 
 #include <stdint.h>
-#include <vector>
+#include <map>
+#include <string>
 #include "math/Vec4.h"
 #include "Pixel.h"
 
@@ -96,7 +97,7 @@ namespace ray
         PixelBuffer _texture;
 
     };
-    typedef std::vector<Texture*> TextureVector;
+    typedef std::map<std::string, Texture*> TextureVector;
 
 }
 #endif

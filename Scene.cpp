@@ -48,7 +48,7 @@ Scene::~Scene()
 
     TextureVector::iterator itt = _textures.begin();
     while (itt != _textures.end()) {
-        delete *itt;
+        delete (*itt).second;
         itt++;
     }
     _textures.clear();
@@ -65,7 +65,8 @@ void Scene::createDefaultScene()
     p1->getMaterial().setAmbient(0.1f);
     p1->getMaterial().setDiffuse(1.0f);
     p1->getMaterial().setReflection(0.0f);
-    p1->getMaterial().setTexture(_textures[0]);
+    if (_textures["stone"])
+        p1->getMaterial().setTexture(_textures["stone"]);
     _drawables.push_back(p1);
 
     Sphere *s2 = new Sphere(Vec3(-2.0f, 8.0f, 0.0f), 1.0f);
@@ -90,12 +91,18 @@ void Scene::createDefaultScene()
 void Scene::loadTextures()
 {
     ray::img::ImageIO& imgio = ray::img::ImageIO::getInstance();
-    Texture * t = imgio.getReader().readTexture("data/floor_stone.ppm");
+    std::string filename = "data/floor_stone.ppm";
+    Texture * t = imgio.getReader().readTexture(filename);
     if (t)
-        _textures.push_back(t);
-    t = imgio.getReader().readTexture("data/metal1.ppm");
+        _textures.insert(std::pair<std::string, Texture*>("stone", t));
+    else
+        std::cerr << "Error: unable to read " << filename << std::endl;
+    filename = "data/metal1.ppm";
+    t = imgio.getReader().readTexture(filename);
     if (t)
-        _textures.push_back(t);
+        _textures.insert(std::pair<std::string, Texture*>("metal", t));
+    else
+        std::cerr << "Error: unable to read " << filename << std::endl;
 }
 void Scene::createLights()
 {
