@@ -17,7 +17,6 @@
  */
 
 #include "RayTracer.h"
-#include "config.h"
 #include "Scene.h"
 #include <float.h>
 #include <iostream>
@@ -35,17 +34,12 @@ RayTracer::~RayTracer()
 {
 
 }
-bool RayTracer::prepare()
+bool RayTracer::prepare(uint32_t height, uint32_t width)
 {
-    _pbuffer.resize(IMG_HEIGHT * IMG_WIDTH);
+    _height = height;
+    _width = width;
+    _pbuffer.resize(height * width);
     _eye.set(0.0f, -5.0f, 0.0f);
-    // screen coordinates are scaled so that height==1.0f in world coordinates
-    // screen is always at y = 0.0f (x-z plane)
-    float scale = 1.0f / (IMG_HEIGHT); 
-    _screen_upperright.set( ((IMG_WIDTH) * scale), 0.0f, 1.0f);
-    _screen_lowerleft.set( -((IMG_WIDTH) * scale), 0.0f, -1.0f);
-    _dx = (_screen_upperright.x() * 2) / (IMG_WIDTH);
-    _dz = (_screen_upperright.z() * 2) / IMG_HEIGHT;
 
     clearBuffer();
     return true;
@@ -58,27 +52,35 @@ void RayTracer::clearBuffer()
         ++pixel;
     }
 }
-void RayTracer::run()
+void RayTracer::trace(uint32_t first_pixel, uint32_t last_pixel)
 {
     PixelBuffer::iterator pixel = _pbuffer.begin();
-    Vec3 pixelcoord(0.0f, 0.0f, 0.0f); // current pixel coordinates in world coordinates
+
+    // screen coordinates are scaled so that height==1.0f in world coordinates
+    // screen is always at y = 0.0f (x-z plane)
+    float scale = 1.0f / (_height); 
+    _screen_upperright.set( (_width * scale), 0.0f, 1.0f);
+    _screen_lowerleft.set( -(_width * scale), 0.0f, -1.0f);
+    _dx = (_screen_upperright.x() * 2) / (_width);
+    _dz = (_screen_upperright.z() * 2) / _height;
+
+    Vec3 pixelcoord; // current pixel coordinates in world coordinates
 
     uint32_t depth = 0;
     // start tracing with the upper left pixel
-    pixelcoord[0] = _screen_lowerleft.x();
-    pixelcoord[2] = 1.0f;
-    uint32_t pixelindex = 0;
-    while (pixel != _pbuffer.end()) {
+    pixelcoord[0] = (first_pixel % _width) * _dx;
+    pixelcoord[2] = 1.0f - (first_pixel / _width) * _dz;
+    uint32_t pixelindex = first_pixel;
+    while (pixelindex <= last_pixel) {
         Vec3 direction = pixelcoord - _eye; 
         direction.normalize();
         Ray ray(_eye, direction);
 
-        (*pixel).set(this->traceRay(ray, depth));
+        _pbuffer[pixelindex].set(this->traceRay(ray, depth));
         depth++;
 
-        ++pixel;
         ++pixelindex;
-        if (pixelindex % (IMG_WIDTH) == 0) {
+        if (pixelindex % (_width) == 0) {
             pixelcoord[0] = _screen_lowerleft.x();
             pixelcoord[2] -= _dz;
         }

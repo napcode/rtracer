@@ -36,10 +36,10 @@ int main()
     // attach this scene to the tracer
     tracer.setScene(scene);
     // setup framebuffer etc.
-    tracer.prepare();
+    tracer.prepare(IMG_HEIGHT, IMG_WIDTH);
 
     // trace!
-    tracer.run();
+    tracer.trace(IMG_WIDTH*384, IMG_HEIGHT*IMG_WIDTH);
 
     // write the framebuffer to disk
     ray::img::ImageIO& imgio = ray::img::ImageIO::getInstance();

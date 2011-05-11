@@ -21,6 +21,7 @@
 #include "Pixel.h"
 #include "math/Vec3.h"
 #include "math/Vec4.h"
+#include "config.h"
 
 namespace ray 
 {
@@ -58,13 +59,17 @@ namespace ray
 
             /**
              * prepare the instance to do some work. This sets up the frame buffer to the configured size etc.
+             * @param height the full height of the final image to be traced
+             * @param width the full width of the final image to be traced
              * @return true if ray tracer is ready to work
              */
-            bool prepare();
+            bool prepare(uint32_t height=IMG_HEIGHT, unsigned int width=IMG_WIDTH);
             /**
-             * fire!
+             * fire! This method allows to specify which fraction of the image shall be traced. Indices are given in pixel coordinates whereas [0, 0] is the upper left pixel of the output image (and [WIDTH*HEIGHT] being the lower right pixel).
+             * @param first_pixel index of the first pixel which shall be traced.              
+             * @param last_pixel index of the last pixel which shall be traced.             
              */
-            void run();
+            void trace(uint32_t first_pixel = 0, uint32_t last_pixel = IMG_WIDTH*IMG_HEIGHT);
 
             /**
              * get the frame buffer of the ray tracer
@@ -76,6 +81,11 @@ namespace ray
              * @return a reference to the pixel buffer
              */
             inline const PixelBuffer& getFrameBuffer() const { return _pbuffer; }
+
+            inline uint32_t getWidth() const {return _width;}
+            inline uint32_t getHeight() const {return _height;}
+            inline uint32_t getFirstPixelIndex() const {return _first_pixel;}
+            inline uint32_t getLastPixelIndex() const {return _last_pixel;}
         private:
             /**
              * trace the given ray
@@ -106,6 +116,10 @@ namespace ray
             math::Vec3 _screen_upperright;
             float _dx;
             float _dz;
+            uint32_t _width;
+            uint32_t _height;
+            uint32_t _first_pixel;
+            uint32_t _last_pixel;
     };
 }
 #endif

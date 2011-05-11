@@ -111,10 +111,18 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_ray_tracer.html#af3fcc6e7bdb7e860011a23e46efe4043">setScene</a> (<a class="el" href="classray_1_1_scene.html">Scene</a> &amp;scene)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classray_1_1_scene.html">Scene</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_ray_tracer.html#afe9858e5de78a222595eaec22fdc04f0">getScene</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classray_1_1_scene.html">Scene</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_ray_tracer.html#a947567386753e0357cb181889b0d7679">getScene</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_ray_tracer.html#adcc73d648d34777f5e26d202d9375b10">prepare</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_ray_tracer.html#a15389a66643e71b6c2e43cd60a69b913">run</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_ray_tracer.html#a5c30b948cd4ac5319243ed3de82297e8">prepare</a> (uint32_t height=IMG_HEIGHT, unsigned int width=IMG_WIDTH)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_ray_tracer.html#ae6832599a630e4c93530752cf22a8901">trace</a> (uint32_t first_pixel=0, uint32_t last_pixel=IMG_WIDTH *IMG_HEIGHT)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">PixelBuffer &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_ray_tracer.html#acca0f99bfc23038f34701ce5feaec172">getFrameBuffer</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const PixelBuffer &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_ray_tracer.html#a3613019d2b74f77be97a46a7f66bd177">getFrameBuffer</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad0cf7becfd804c8108b5628a2da8a1d9"></a><!-- doxytag: member="ray::RayTracer::getWidth" ref="ad0cf7becfd804c8108b5628a2da8a1d9" args="() const " -->
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>getWidth</b> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a707ed08bb30d2a5b447308e95c98bc03"></a><!-- doxytag: member="ray::RayTracer::getHeight" ref="a707ed08bb30d2a5b447308e95c98bc03" args="() const " -->
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>getHeight</b> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d2a92a202fcf1022ec01a1886c20b2a"></a><!-- doxytag: member="ray::RayTracer::getFirstPixelIndex" ref="a7d2a92a202fcf1022ec01a1886c20b2a" args="() const " -->
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>getFirstPixelIndex</b> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42b50f3bad59736738d016124df9d795"></a><!-- doxytag: member="ray::RayTracer::getLastPixelIndex" ref="a42b50f3bad59736738d016124df9d795" args="() const " -->
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>getLastPixelIndex</b> () const </td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>the main interface to the ray tracer this class implements the actual ray tracer </p>
@@ -155,24 +163,6 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a947567386753e0357cb181889b0d7679"></a><!-- doxytag: member="ray::RayTracer::getScene" ref="a947567386753e0357cb181889b0d7679" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classray_1_1_scene.html">Scene</a>&amp; ray::RayTracer::getScene </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td><code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>retrieve the current <a class="el" href="classray_1_1_scene.html">Scene</a> of the ray tracer </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>a reference to the <a class="el" href="classray_1_1_scene.html">Scene</a> </dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="afe9858e5de78a222595eaec22fdc04f0"></a><!-- doxytag: member="ray::RayTracer::getScene" ref="afe9858e5de78a222595eaec22fdc04f0" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -191,38 +181,57 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="adcc73d648d34777f5e26d202d9375b10"></a><!-- doxytag: member="ray::RayTracer::prepare" ref="adcc73d648d34777f5e26d202d9375b10" args="()" -->
+<a class="anchor" id="a947567386753e0357cb181889b0d7679"></a><!-- doxytag: member="ray::RayTracer::getScene" ref="a947567386753e0357cb181889b0d7679" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classray_1_1_scene.html">Scene</a>&amp; ray::RayTracer::getScene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>retrieve the current <a class="el" href="classray_1_1_scene.html">Scene</a> of the ray tracer </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>a reference to the <a class="el" href="classray_1_1_scene.html">Scene</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5c30b948cd4ac5319243ed3de82297e8"></a><!-- doxytag: member="ray::RayTracer::prepare" ref="a5c30b948cd4ac5319243ed3de82297e8" args="(uint32_t height=IMG_HEIGHT, unsigned int width=IMG_WIDTH)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool RayTracer::prepare </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>height</em> = <code>IMG_HEIGHT</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>width</em> = <code>IMG_WIDTH</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 <p>prepare the instance to do some work. This sets up the frame buffer to the configured size etc. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">height</td><td>the full height of the final image to be traced </td></tr>
+    <tr><td class="paramname">width</td><td>the full width of the final image to be traced </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true if ray tracer is ready to work </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a15389a66643e71b6c2e43cd60a69b913"></a><!-- doxytag: member="ray::RayTracer::run" ref="a15389a66643e71b6c2e43cd60a69b913" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void RayTracer::run </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>fire! </p>
 
 </div>
 </div>
@@ -250,6 +259,41 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ae6832599a630e4c93530752cf22a8901"></a><!-- doxytag: member="ray::RayTracer::trace" ref="ae6832599a630e4c93530752cf22a8901" args="(uint32_t first_pixel=0, uint32_t last_pixel=IMG_WIDTH *IMG_HEIGHT)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RayTracer::trace </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>first_pixel</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>last_pixel</em> = <code>IMG_WIDTH*IMG_HEIGHT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>fire! This method allows to specify which fraction of the image shall be traced. Indices are given in pixel coordinates whereas [0, 0] is the upper left pixel of the output image (and [WIDTH*HEIGHT] being the lower right pixel). </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">first_pixel</td><td>index of the first pixel which shall be traced. </td></tr>
+    <tr><td class="paramname">last_pixel</td><td>index of the last pixel which shall be traced. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_ray_tracer_8h_source.html">RayTracer.h</a></li>
 <li>RayTracer.cpp</li>
@@ -260,7 +304,7 @@ Public Member Functions</h2></td></tr>
     <ul>
       <li class="navelem"><b>ray</b>      </li>
       <li class="navelem"><a class="el" href="classray_1_1_ray_tracer.html">RayTracer</a>      </li>
-      <li class="footer">Generated on Fri Apr 15 2011 16:50:50 for rtracer by&#160;
+      <li class="footer">Generated on Wed May 11 2011 17:18:11 for rtracer by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

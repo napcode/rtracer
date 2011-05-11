@@ -79,6 +79,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
 <div id="doc-content">
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">ray::Box Class Reference</div>  </div>
 </div>
@@ -100,9 +102,158 @@ Collaboration diagram for ray::Box:</div>
 
 <p><a href="classray_1_1_box-members.html">List of all members.</a></p>
 <table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac1a7caac9a5b114cc113c4c70acfde95"></a><!-- doxytag: member="ray::Box::Box" ref="ac1a7caac9a5b114cc113c4c70acfde95" args="(const math::Vec3 &amp;center, float width, float height, float depth)" -->
+&#160;</td><td class="memItemRight" valign="bottom"><b>Box</b> (const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;center, float width, float height, float depth)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6b9f4e405cde3b877446f5d8a1f84147"></a><!-- doxytag: member="ray::Box::Box" ref="a6b9f4e405cde3b877446f5d8a1f84147" args="(const math::Vec3 &amp;center, const math::Vec3 &amp;vec1, const math::Vec3 &amp;vec2, float width, float height, float depth)" -->
+&#160;</td><td class="memItemRight" valign="bottom"><b>Box</b> (const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;center, const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;vec1, const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;vec2, float width, float height, float depth)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af060f95902a0e3b51baea6cd498ac8ab"></a><!-- doxytag: member="ray::Box::Box" ref="af060f95902a0e3b51baea6cd498ac8ab" args="(const std::string &amp;name, const math::Vec3 &amp;center, const math::Vec3 &amp;vec1, const math::Vec3 &amp;vec2, float width, float height, float depth)" -->
+&#160;</td><td class="memItemRight" valign="bottom"><b>Box</b> (const std::string &amp;name, const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;center, const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;vec1, const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;vec2, float width, float height, float depth)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_box.html#ab6f2dcc6a9383a6f940eeaeb7ccbc2ee">getNormalAt</a> (const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;at=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmath_1_1_vec4f.html">math::Vec4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_box.html#a487205874560967213f16d436b888e29">getColorAt</a> (const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;at=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_box.html#a193aae4f75080983a19f365ae36e320a">intersect</a> (const <a class="el" href="classray_1_1_ray.html">Ray</a> &amp;r, <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;point, float &amp;dist) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_box.html#abc9c8633756a4200665cf1c81198cdf2">isSphere</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_box.html#a7d760ef100aa4417838e4ef2126fa5f8">isBox</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classray_1_1_box.html#a2516d2a29faba07cf77d8118efafe09c">isPlane</a> () const </td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a487205874560967213f16d436b888e29"></a><!-- doxytag: member="ray::Box::getColorAt" ref="a487205874560967213f16d436b888e29" args="(const math::Vec3 &amp;at=0) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmath_1_1_vec4f.html">math::Vec4</a> Box::getColorAt </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;&#160;</td>
+          <td class="paramname"><em>at</em> = <code>0</code></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>reimplemented from <a class="el" href="classray_1_1_drawable.html">Drawable</a> </p>
+
+<p>Implements <a class="el" href="classray_1_1_drawable.html#a7f341f821b357ed7b13dc1f8fd3fc382">ray::Drawable</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab6f2dcc6a9383a6f940eeaeb7ccbc2ee"></a><!-- doxytag: member="ray::Box::getNormalAt" ref="ab6f2dcc6a9383a6f940eeaeb7ccbc2ee" args="(const math::Vec3 &amp;at=0) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> Box::getNormalAt </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;&#160;</td>
+          <td class="paramname"><em>at</em> = <code>0</code></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>reimplemented from <a class="el" href="classray_1_1_drawable.html">Drawable</a> </p>
+
+<p>Implements <a class="el" href="classray_1_1_drawable.html#a5d02da5f716c8c1a2ec58f71ae679eab">ray::Drawable</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a193aae4f75080983a19f365ae36e320a"></a><!-- doxytag: member="ray::Box::intersect" ref="a193aae4f75080983a19f365ae36e320a" args="(const Ray &amp;r, math::Vec3 &amp;point, float &amp;dist) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Box::intersect </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classray_1_1_ray.html">Ray</a> &amp;&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmath_1_1_vec3f.html">math::Vec3</a> &amp;&#160;</td>
+          <td class="paramname"><em>point</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>dist</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>reimplemented from <a class="el" href="classray_1_1_i_intersectable.html">IIntersectable</a> </p>
+
+<p>Implements <a class="el" href="classray_1_1_i_intersectable.html#a27d7428b980ea9199361fe77c01dad9b">ray::IIntersectable</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7d760ef100aa4417838e4ef2126fa5f8"></a><!-- doxytag: member="ray::Box::isBox" ref="a7d760ef100aa4417838e4ef2126fa5f8" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ray::Box::isBox </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>reimplemented from <a class="el" href="classray_1_1_drawable.html">Drawable</a> </p>
+
+<p>Implements <a class="el" href="classray_1_1_drawable.html#a4f8312011c9f31275a8040f23dcc630e">ray::Drawable</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2516d2a29faba07cf77d8118efafe09c"></a><!-- doxytag: member="ray::Box::isPlane" ref="a2516d2a29faba07cf77d8118efafe09c" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ray::Box::isPlane </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>reimplemented from <a class="el" href="classray_1_1_drawable.html">Drawable</a> </p>
+
+<p>Implements <a class="el" href="classray_1_1_drawable.html#aab422c19e4a171d56a780bef4aedd87a">ray::Drawable</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abc9c8633756a4200665cf1c81198cdf2"></a><!-- doxytag: member="ray::Box::isSphere" ref="abc9c8633756a4200665cf1c81198cdf2" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ray::Box::isSphere </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>reimplemented from <a class="el" href="classray_1_1_drawable.html">Drawable</a> </p>
+
+<p>Implements <a class="el" href="classray_1_1_drawable.html#a5452ab859b6792be12e969b6d95021b4">ray::Drawable</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_box_8h_source.html">Box.h</a></li>
+<li>Box.cpp</li>
 </ul>
 </div>
 </div>
@@ -110,7 +261,7 @@ Collaboration diagram for ray::Box:</div>
     <ul>
       <li class="navelem"><b>ray</b>      </li>
       <li class="navelem"><a class="el" href="classray_1_1_box.html">Box</a>      </li>
-      <li class="footer">Generated on Fri Apr 15 2011 16:50:50 for rtracer by&#160;
+      <li class="footer">Generated on Wed May 11 2011 17:18:11 for rtracer by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

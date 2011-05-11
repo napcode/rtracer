@@ -104,21 +104,47 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00022"></a>00022 <span class="preprocessor">#include &quot;math/Vec3.h&quot;</span>
 <a name="l00023"></a>00023 <span class="preprocessor">#include &quot;math/Vec4.h&quot;</span>
 <a name="l00024"></a>00024 
-<a name="l00025"></a>00025 <span class="keyword">namespace </span>ray
-<a name="l00026"></a>00026 {
+<a name="l00025"></a>00025 <span class="preprocessor">#define BOX_DELTA 0.0001f</span>
+<a name="l00026"></a>00026 <span class="preprocessor"></span>
 <a name="l00027"></a>00027 
-<a name="l00028"></a><a class="code" href="classray_1_1_box.html">00028</a>     <span class="keyword">class </span><a class="code" href="classray_1_1_box.html">Box</a> : <span class="keyword">public</span> <a class="code" href="classray_1_1_drawable.html">Drawable</a>
-<a name="l00029"></a>00029     {
+<a name="l00028"></a>00028 <span class="keyword">namespace </span>ray
+<a name="l00029"></a>00029 {
 <a name="l00030"></a>00030 
-<a name="l00031"></a>00031     };
-<a name="l00032"></a>00032 }
-<a name="l00033"></a>00033 <span class="preprocessor">#endif</span>
+<a name="l00031"></a><a class="code" href="classray_1_1_box.html">00031</a>     <span class="keyword">class </span><a class="code" href="classray_1_1_box.html">Box</a> : <span class="keyword">public</span> <a class="code" href="classray_1_1_drawable.html">Drawable</a>
+<a name="l00032"></a>00032     {
+<a name="l00033"></a>00033         <span class="keyword">public</span>:
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035             <a class="code" href="classray_1_1_box.html">Box</a>();
+<a name="l00036"></a>00036             <a class="code" href="classray_1_1_box.html">Box</a>(<span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; center, <span class="keywordtype">float</span> width, <span class="keywordtype">float</span> height, <span class="keywordtype">float</span> depth);
+<a name="l00037"></a>00037             <a class="code" href="classray_1_1_box.html">Box</a>(<span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; center, <span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; vec1, <span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; vec2, <span class="keywordtype">float</span> width, <span class="keywordtype">float</span> height, <span class="keywordtype">float</span> depth);
+<a name="l00038"></a>00038             <a class="code" href="classray_1_1_box.html">Box</a>(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; center, <span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; vec1, <span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; vec2, <span class="keywordtype">float</span> width, <span class="keywordtype">float</span> height, <span class="keywordtype">float</span> depth);
+<a name="l00039"></a>00039 
+<a name="l00043"></a>00043             <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a> <a class="code" href="classray_1_1_box.html#ab6f2dcc6a9383a6f940eeaeb7ccbc2ee">getNormalAt</a>(<span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; at = 0) <span class="keyword">const</span>;
+<a name="l00047"></a>00047             <a class="code" href="classmath_1_1_vec4f.html">math::Vec4</a> <a class="code" href="classray_1_1_box.html#a487205874560967213f16d436b888e29">getColorAt</a>(<span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; at = 0) <span class="keyword">const</span>;
+<a name="l00048"></a>00048 
+<a name="l00052"></a>00052             <span class="keywordtype">bool</span> <a class="code" href="classray_1_1_box.html#a193aae4f75080983a19f365ae36e320a">intersect</a>(<span class="keyword">const</span> <a class="code" href="classray_1_1_ray.html">Ray</a>&amp; r, <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; point, <span class="keywordtype">float</span> &amp;dist) <span class="keyword">const</span>;
+<a name="l00053"></a>00053 
+<a name="l00057"></a><a class="code" href="classray_1_1_box.html#abc9c8633756a4200665cf1c81198cdf2">00057</a>             <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classray_1_1_box.html#abc9c8633756a4200665cf1c81198cdf2">isSphere</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <span class="keyword">false</span>;};
+<a name="l00061"></a><a class="code" href="classray_1_1_box.html#a7d760ef100aa4417838e4ef2126fa5f8">00061</a>             <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classray_1_1_box.html#a7d760ef100aa4417838e4ef2126fa5f8">isBox</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <span class="keyword">true</span>;};
+<a name="l00065"></a><a class="code" href="classray_1_1_box.html#a2516d2a29faba07cf77d8118efafe09c">00065</a>             <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classray_1_1_box.html#a2516d2a29faba07cf77d8118efafe09c">isPlane</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <span class="keyword">false</span>;};
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067         <span class="keyword">private</span>:
+<a name="l00068"></a>00068             <span class="keywordtype">void</span> setNormals(<span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; vec1=<a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>(1.0f, 0.0f, 0.0f), <span class="keyword">const</span> <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>&amp; vec2=<a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a>(0.0f, 1.0f, 0.0f));
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070             <span class="keywordtype">void</span> setDimensions(<span class="keywordtype">float</span> width=1.0f, <span class="keywordtype">float</span> height=1.0f, <span class="keywordtype">float</span> deep=1.0f);
+<a name="l00071"></a>00071 
+<a name="l00072"></a>00072             <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a> _center;
+<a name="l00073"></a>00073             <a class="code" href="classmath_1_1_vec3f.html">math::Vec3</a> _normals[3];
+<a name="l00074"></a>00074             <span class="keywordtype">float</span> _dimensions[3];
+<a name="l00075"></a>00075     };
+<a name="l00076"></a>00076 }
+<a name="l00077"></a>00077 <span class="preprocessor">#endif</span>
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><b>Box.h</b>      </li>
-      <li class="footer">Generated on Fri Apr 15 2011 16:50:50 for rtracer by&#160;
+      <li class="footer">Generated on Wed May 11 2011 17:18:11 for rtracer by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>
