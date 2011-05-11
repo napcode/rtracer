@@ -87,6 +87,18 @@ void Scene::createDefaultScene()
     //s1->getMaterial().setFresnelFactor(1.0f);
     //s1->getMaterial().setFresnelPower(0.0f);
     _drawables.push_back(s1);
+    
+    Vec3 n1(1.0f, 0.0f, 0.0f);
+    Vec3 n2(0.0f, 1.0f, 0.0f);
+    math::Matrix4 m;
+    m.makeRotate(0.3f, Y_AXIS);
+    n1 = m * n1;
+
+    Box *b1 = new Box(Vec3(2.0f, 5.0f, 0.0f),n1,n2,  1.0f, 1.0f, 1.0f);
+    b1->getMaterial().setColor(Vec4(1.0f, 0.0f, 0.0f, 1.0f));
+    if (_textures["metal"])
+        b1->getMaterial().setTexture(_textures["metal"]);
+    _drawables.push_back(b1);
 }
 void Scene::loadTextures()
 {
@@ -113,14 +125,14 @@ void Scene::createLights()
     _lights.push_back(l1);
 
     // point light
-    l1 = new Light(Vec3(-5.0f, 0.0f, 10.0f));
+    l1 = new Light(Vec3(-5.0f, 10.0f, 10.0f));
     l1->setIntensity(5.0f);
     l1->setColor(Vec4(1.0f, 1.0f, 1.0f, 1.0f));
     l1->setType(Light::POINT);
     l1->setName("L2");
     _lights.push_back(l1);
 
-    l1 = new Light(Vec3(3.0f, 0.0f, 10.0f));
+    l1 = new Light(Vec3(3.0f, 10.0f, 10.0f));
     l1->setIntensity(2.0f);
     l1->setColor(Vec4(1.0f, 0.8, 0.8f, 1.0f));
     l1->setType(Light::POINT);
