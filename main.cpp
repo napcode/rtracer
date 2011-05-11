@@ -39,7 +39,7 @@ int main()
     tracer.prepare(IMG_HEIGHT, IMG_WIDTH);
 
     // trace!
-    tracer.trace(IMG_WIDTH*384, IMG_HEIGHT*IMG_WIDTH);
+    tracer.trace(0, IMG_HEIGHT*IMG_WIDTH);
 
     // write the framebuffer to disk
     ray::img::ImageIO& imgio = ray::img::ImageIO::getInstance();
