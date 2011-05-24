@@ -68,7 +68,7 @@ void RayTracer::trace(uint32_t first_pixel, uint32_t last_pixel)
 
     uint32_t depth = 0;
     // start tracing with the upper left pixel
-    pixelcoord[0] = (first_pixel % _width) * _dx;
+    pixelcoord[0] = (first_pixel % _width) * _dx + _screen_lowerleft.x();
     pixelcoord[2] = 1.0f - (first_pixel / _width) * _dz;
     uint32_t pixelindex = first_pixel;
     while (pixelindex <= last_pixel) {
