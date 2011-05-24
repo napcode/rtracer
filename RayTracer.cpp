@@ -95,6 +95,7 @@ Vec4 RayTracer::traceRay(const Ray& ray, uint32_t trace_depth)
     float min_distance = FLT_MAX;
     float tmp_distance;
     Drawable *drawable = 0;
+    bool hit=false;
 
     DrawableVector::iterator object = _scene->getDrawables().begin();
     Vec4 out_color;
@@ -104,32 +105,36 @@ Vec4 RayTracer::traceRay(const Ray& ray, uint32_t trace_depth)
         Vec3 tmp_intersection;
         if ( (*object)->intersect(ray, tmp_intersection, tmp) ) {
             tmp_distance = (tmp_intersection - ray.getOrigin()).length();
-            if (min_distance > tmp_distance) {
-                min_distance = tmp_distance;
-                drawable = (*object);
-
-                Vec4 reflection_color;
-                Vec3 obj_normal = drawable->getNormalAt(tmp_intersection);
-                Vec4 obj_color =  drawable->getColorAt(tmp_intersection);
-                Vec4 ambient_color = obj_color * drawable->getMaterial().getAmbient();
-
-                // do reflection
-                if ( drawable->getMaterial().getReflection() > 0.0f  && trace_depth < MAX_TRACE_DEPTH ) {
-                    Vec3 par = obj_normal * ( obj_normal * ray.getDirection() );
-                    Vec3 reflection = ray.getDirection() - par * 2.0f;
-                    reflection.normalize();
-                    Ray reflected_ray(tmp_intersection, reflection);
-                    reflection_color = traceRay(reflected_ray, trace_depth + 1);
-                }
-                // do shadows and specular
-                Vec4 lighting_color = traceLights(tmp_intersection, drawable);
-
-                // trace if this object is closer than the last one
-                // this ignores transparency
-                out_color = ambient_color + obj_color.componentMultiply(lighting_color);
+           if (min_distance > tmp_distance) {
+                  min_distance = tmp_distance;
+                  drawable = (*object);
+                  intersection=tmp_intersection;
+                  hit=true;
             }
         }
         ++object;
+      }
+
+    if(hit){
+    Vec4 reflection_color;
+    Vec3 obj_normal = drawable->getNormalAt(intersection);
+    Vec4 obj_color =  drawable->getColorAt(intersection);
+    Vec4 ambient_color = obj_color * drawable->getMaterial().getAmbient();
+
+    // do reflection
+    if ( drawable->getMaterial().getReflection() > 0.0f  && trace_depth < MAX_TRACE_DEPTH ) {
+    	Vec3 par = obj_normal * ( obj_normal * ray.getDirection() );
+    	Vec3 reflection = ray.getDirection() - par * 2.0f;
+    	reflection.normalize();
+    	Ray reflected_ray(intersection, reflection);
+    	reflection_color = traceRay(reflected_ray, trace_depth + 1);
+    }
+     // do shadows and specular
+    Vec4 lighting_color = traceLights(intersection, drawable);
+
+
+     // this ignores transparency
+     out_color = ambient_color + obj_color.componentMultiply(lighting_color);
     }
 
     return out_color;
