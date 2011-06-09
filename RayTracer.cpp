@@ -71,7 +71,7 @@ void RayTracer::trace(uint32_t first_pixel, uint32_t last_pixel)
     pixelcoord[0] = (first_pixel % _width) * _dx + _screen_lowerleft.x();
     pixelcoord[2] = 1.0f - (first_pixel / _width) * _dz;
     uint32_t pixelindex = first_pixel;
-    while (pixelindex <= last_pixel) {
+    while (pixelindex < last_pixel) {
         Vec3 direction = pixelcoord - _eye; 
         direction.normalize();
         Ray ray(_eye, direction);
