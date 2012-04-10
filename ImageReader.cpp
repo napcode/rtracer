@@ -53,8 +53,8 @@ Texture* Reader::readTexturePPM(const std::string& filepath)
         bool ret = false;
         // read format
         do {
-                getline(infile, tmp);
-                ret = checkComments(tmp);
+            getline(infile, tmp);
+            ret = checkComments(tmp);
         } while (ret);
         ss << tmp;
         ss >> format;
@@ -62,8 +62,8 @@ Texture* Reader::readTexturePPM(const std::string& filepath)
         // read width & height
         ret = false;
         do {
-                getline(infile, tmp);
-                ret = checkComments(tmp);
+            getline(infile, tmp);
+            ret = checkComments(tmp);
         } while (ret);
         std::istringstream iss(tmp);
         iss >> std::skipws >> width >> height;
@@ -74,8 +74,8 @@ Texture* Reader::readTexturePPM(const std::string& filepath)
         ret = false;
         do {
 
-                getline(infile, tmp);
-                ret = checkComments(tmp);
+            getline(infile, tmp);
+            ret = checkComments(tmp);
         } while (ret);
         std::istringstream iss1(tmp);
         iss1>> std::skipws >> max;
@@ -84,8 +84,8 @@ Texture* Reader::readTexturePPM(const std::string& filepath)
         ret = false;
         char c = infile.peek();
         while ( c == '#' ) {
-                getline(infile, tmp);
-                c = infile.peek();
+            getline(infile, tmp);
+            c = infile.peek();
         } 
 
         PixelBuffer &buffer = t->getImageBuffer();
@@ -112,8 +112,8 @@ Texture* Reader::readTexturePPM(const std::string& filepath)
 }
 Texture* Reader::readTextureJPG(const std::string& filepath)
 {
-        std::cerr << "reading " << filepath << " is not implemented yet" << std::endl;
-
+    std::cerr << "reading " << filepath << " is not implemented yet" << std::endl;
+    return 0;
 }
 bool Reader::checkComments(std::string& buffer)
 {

@@ -101,7 +101,7 @@ namespace ray
              * @param drawable the drawable the ray has intersected
              * @return the light color of the current pixel/intersection
              */
-            math::Vec4 traceLights(const math::Vec3& intersection, Drawable *drawable );
+            math::Vec4 traceLights(const math::Vec3& intersection, Drawable *drawable, math::Vec3 eye);
 
             /**
              * clear the framebuffer to the background color of the scene

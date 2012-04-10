@@ -60,34 +60,34 @@ namespace ray
              * set the ambient factor for this Material. The ambient term has the effect of "self-radiance".
              * @param ambient the new ambient factor for the Material
              */
-            inline void setAmbient(float ambient) { _ambient = ambient; }
+            inline void setAmbientFactor(float ambient) { _ambient = ambient; }
             /**
              * get the ambient factor for this Material. The ambient term has the effect of "self-radiance".
              * @return the current ambient foactor for this Material
              */
-            inline float getAmbient() const { return _ambient; }
+            inline float getAmbientFactor() const { return _ambient; }
 
             /**
              * Set the diffuse factor for this Material. This term is currently not used.
              * @param diffuse the new diffuse factor
              */
-            inline void setDiffuse(float diffuse) { _diffuse = diffuse; }
+            inline void setDiffuseFactor(float diffuse) { _diffuse = diffuse; }
             /**
              * get the diffuse factor for this Material. This term is currently not used.
              * @return the diffuse factor
              */
-            inline float getDiffuse() const { return _diffuse; }
+            inline float getDiffuseFactor() const { return _diffuse; }
 
             /**
              * set a new reflection factor for this Material. This term is currently not used.
              * @return the reflection factor
              */
-            inline void setReflection(float reflection) { _reflection = reflection; }
+            inline void setReflectionFactor(float reflection) { _reflection = reflection; }
             /**
              * get the reflection factor for this Material. This term is currently not used.
              * @return the reflection factor
              */
-            inline float getReflection() const { return _reflection; }
+            inline float getReflectionFactor() const { return _reflection; }
 
             /**
              * assignment operator

@@ -22,17 +22,17 @@ using namespace ray;
 using namespace math;
 
 Light::Light(const std::string& name)
-: _name(name), _color(1.0f, 1.0f, 1.0f, 1.0f), _normal(0.0f, 1.0f, 0.0f), _type(DIRECTIONAL), _intensity(0.1f)
+: _name(name), _color(1.0f, 1.0f, 1.0f, 1.0f), _ambient_color(0.0f, 0.0f, 0.0f, 1.0f), _normal(0.0f, 1.0f, 0.0f), _type(DIRECTIONAL), _intensity(0.1f)
 {
 
 }
 Light::Light(const math::Vec3& pos, const std::string& name)
-: _name(name), _position(pos), _color(1.0f, 1.0f, 1.0f, 1.0f), _normal(0.0f, 1.0f, 0.0f), _type(DIRECTIONAL), _intensity(0.1f)
+: _name(name), _position(pos), _color(1.0f, 1.0f, 1.0f, 1.0f), _ambient_color(0.0f, 0.0f, 0.0f, 1.0f), _normal(0.0f, 1.0f, 0.0f), _type(DIRECTIONAL), _intensity(0.1f)
 {
 
 }
 Light::Light(const math::Vec3& pos, const math::Vec4& color, const std::string& name)
-: _name(name), _position(pos), _color(color), _normal(0.0f, 1.0f, 0.0f), _type(DIRECTIONAL), _intensity(0.1f)
+: _name(name), _position(pos), _color(color), _ambient_color(0.0f, 0.0f, 0.0f, 1.0f), _normal(0.0f, 1.0f, 0.0f), _type(DIRECTIONAL), _intensity(0.1f)
 {
 
 }

@@ -21,7 +21,7 @@
 #include <float.h>
 #include <iostream>
 #include <stdlib.h>
-
+#define MAX(a, b)  (((a) > (b)) ? (a) : (b))
 using namespace ray;
 using namespace math;
 
@@ -71,11 +71,15 @@ void RayTracer::trace(uint32_t first_pixel, uint32_t last_pixel)
     pixelcoord[0] = (first_pixel % _width) * _dx + _screen_lowerleft.x();
     pixelcoord[2] = 1.0f - (first_pixel / _width) * _dz;
     uint32_t pixelindex = first_pixel;
+
+    // main loop: trace from 1st to last pixel
     while (pixelindex < last_pixel) {
+        // create an eye <-> current_pixel ray
         Vec3 direction = pixelcoord - _eye; 
         direction.normalize();
         Ray ray(_eye, direction);
 
+        // trace that ray
         _pbuffer[pixelindex].set(this->traceRay(ray, depth));
         depth++;
 
@@ -91,57 +95,53 @@ void RayTracer::trace(uint32_t first_pixel, uint32_t last_pixel)
 }
 Vec4 RayTracer::traceRay(const Ray& ray, uint32_t trace_depth)
 {
-    Vec3 intersection;
-    float min_distance = FLT_MAX;
-    float tmp_distance;
-    Drawable *drawable = 0;
-    bool hit=false;
+    Vec3 intersection;              /* last point of intersection */
+    float min_distance = FLT_MAX;   /* distance to intersection   */
+    float tmp_distance;             /* there are multiple inters. */
+    Drawable *hit_drawable = 0;     /* which drawable did we hit  */
 
-    DrawableVector::iterator object = _scene->getDrawables().begin();
+    DrawableVector::iterator drawable = _scene->getDrawables().begin();
     Vec4 out_color;
-    while (object != _scene->getDrawables().end()) {
+    while (drawable != _scene->getDrawables().end()) {
         // create ray
         float tmp;
         Vec3 tmp_intersection;
-        if ( (*object)->intersect(ray, tmp_intersection, tmp) ) {
+        if ( (*drawable)->intersect(ray, tmp_intersection, tmp) ) {
             tmp_distance = (tmp_intersection - ray.getOrigin()).length();
-           if (min_distance > tmp_distance) {
-                  min_distance = tmp_distance;
-                  drawable = (*object);
-                  intersection=tmp_intersection;
-                  hit=true;
+            if (min_distance > tmp_distance) {
+                min_distance = tmp_distance;
+                hit_drawable = (*drawable);
+                intersection = tmp_intersection;
             }
         }
-        ++object;
-      }
-
-    if(hit){
-    Vec4 reflection_color;
-    Vec3 obj_normal = drawable->getNormalAt(intersection);
-    Vec4 obj_color =  drawable->getColorAt(intersection);
-    Vec4 ambient_color = obj_color * drawable->getMaterial().getAmbient();
-
-    // do reflection
-    if ( drawable->getMaterial().getReflection() > 0.0f  && trace_depth < MAX_TRACE_DEPTH ) {
-    	Vec3 par = obj_normal * ( obj_normal * ray.getDirection() );
-    	Vec3 reflection = ray.getDirection() - par * 2.0f;
-    	reflection.normalize();
-    	Ray reflected_ray(intersection, reflection);
-    	reflection_color = traceRay(reflected_ray, trace_depth + 1);
+        ++drawable;
     }
-     // do shadows and specular
-    Vec4 lighting_color = traceLights(intersection, drawable);
 
+    if(hit_drawable) {
+        Vec4 reflection_color;
+        Vec3 obj_normal = hit_drawable->getNormalAt(intersection);
 
-     // this ignores transparency
-     out_color = ambient_color + obj_color.componentMultiply(lighting_color);
+        // do reflection
+        // FIXME: still work-in-progress (currently inactive)
+        if ( hit_drawable->getMaterial().getReflectionFactor() > 0.0f  && trace_depth < MAX_TRACE_DEPTH ) {
+            Vec3 par = obj_normal * ( obj_normal * ray.getDirection() );
+            Vec3 reflection = ray.getDirection() - par * 2.0f;
+            reflection.normalize();
+            Ray reflected_ray(intersection, reflection);
+            reflection_color = traceRay(reflected_ray, trace_depth + 1);
+        }
+        // do shadows and specular
+        out_color = traceLights(intersection, hit_drawable, ray.getDirection());
     }
 
     return out_color;
 }
-Vec4 RayTracer::traceLights(const Vec3& intersection, Drawable *drawable )
+Vec4 RayTracer::traceLights(const Vec3& intersection, Drawable *drawable, Vec3 eye )
 {
     Vec4 out_color;
+    Vec4 spec_color;
+    Vec4 diffuse_color =  drawable->getColorAt(intersection);
+    float factor_ambient = drawable->getMaterial().getAmbientFactor();
     LightVector::iterator light = _scene->getLights().begin();
     while (light != _scene->getLights().end()) {
         //Vec3 light_direction = intersection - (*light)->getPosition();
@@ -179,9 +179,22 @@ Vec4 RayTracer::traceLights(const Vec3& intersection, Drawable *drawable )
             switch ((*light)->getType()) {
                 case Light::DIRECTIONAL:
                     out_color += (*light)->getColor() * (*light)->getIntensity();
+                    out_color += (*light)->getAmbientColor() * factor_ambient;
                     break;
                 case Light::POINT:
+                    {
                     out_color += (*light)->getColor() * (*light)->getIntensity() * light_scaling * 1.0f/(lightdist);
+                    Vec3 half =  light_direction - eye;
+                    half.normalize();
+                    Vec3 normal = drawable->getNormalAt(intersection);
+                    normal.normalize();
+                    float shine = 16.0f;
+                    float temp = MAX(0.0, normal * half);
+                    float spec_val = pow(temp, shine);
+                    spec_color += (*light)->getColor() * (*light)->getIntensity() * spec_val * drawable->getMaterial().getReflectionFactor();
+                    out_color += (*light)->getAmbientColor() * factor_ambient;
+                    break;
+                    }
                 default:
                     break;
             }
@@ -189,5 +202,7 @@ Vec4 RayTracer::traceLights(const Vec3& intersection, Drawable *drawable )
 
         light++;
     }
+    out_color = diffuse_color.componentMultiply(out_color);
+    out_color += spec_color;
     return out_color;
 }

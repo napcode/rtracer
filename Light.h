@@ -78,7 +78,23 @@ namespace ray
              * get a current color for this light source - const version
              * @return the current color
              */
-            inline const math::Vec4& getColor() const { return _color; }
+            inline const math::Vec4& getColor() const { return _ambient_color; }
+
+            /**
+             * set a new color for this light source
+             * @param color the new color
+             */
+            inline void setAmbientColor(const math::Vec4& color) { _ambient_color = color; }
+            /**
+             * get a current color for this light source
+             * @return the current color
+             */
+            inline math::Vec4& getAmbientColor() { return _ambient_color; }
+            /**
+             * get a current color for this light source - const version
+             * @return the current color
+             */
+            inline const math::Vec4& getAmbientColor() const { return _ambient_color; }
 
             /**
              * set a new transparency for this light source <br>
@@ -167,10 +183,12 @@ namespace ray
              * @param intensity the new intensity of the light source
              */
             inline void setIntensity(float intensity) { _intensity = intensity; }
+
         private:
             std::string _name;
             math::Vec3 _position;
             math::Vec4 _color;
+            math::Vec4 _ambient_color;
             math::Vec3 _normal;
             float _size;
             float _cutoff;

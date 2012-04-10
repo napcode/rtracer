@@ -32,8 +32,8 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
-#define IMG_WIDTH 1024
-#define IMG_HEIGHT 768 
+#define IMG_WIDTH 1280
+#define IMG_HEIGHT 1024 
 #define MAX_TRACE_DEPTH 1
 #define VERSION "v0.1beta" 
 
