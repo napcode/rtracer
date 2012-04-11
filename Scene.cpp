@@ -75,7 +75,7 @@ void Scene::createDefaultScene()
     Sphere *s1 = new Sphere(Vec3(0.0f, 4.0f, 0.0f), 0.6f);
     s1->setName("Sphere1");
     s1->getMaterial().setColor(Vec4f(1.0f, 1.0f, 0.0f, 1.0f));
-    s1->getMaterial().setReflectionFactor(0.5f);
+    s1->getMaterial().setReflectionFactor(0.2f);
     _drawables.push_back(s1);
 
     Vec3 n1(1.0f, 0.0f, 0.0f);
@@ -121,7 +121,7 @@ void Scene::createLights()
     {
         // point light
         Light *l = new Light(Vec3(-2.0f, 4.0f, 5.0f));
-        l->setIntensity(1.0f);
+        l->setIntensity(3.0f);
         l->setColor(Vec4(1.0f, 1.0f, 1.0f, 1.0f));
         l->setType(Light::POINT);
         l->setName("L2");
