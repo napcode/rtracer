@@ -31,7 +31,7 @@ namespace ray
     namespace img
     {
         /**
-         * enum describes all known image formats
+         * @brief enum holds all known image formats
          */
         enum FILEFORMAT {
             PPM,  
@@ -119,6 +119,10 @@ namespace ray
                 std::string _path;
                 FILEFORMAT _fmt;
         };
+
+        /**
+         * @brief Class reads images and textures
+        */
         class Reader
         {
             public:
@@ -129,6 +133,10 @@ namespace ray
                 Texture* readTextureJPG(const std::string& filepath);
                 bool checkComments(std::string& infile);
         };
+
+        /**
+         * @brief Interface to ImageReaders and -Writers
+         */
         class ImageIO
         {
             public:

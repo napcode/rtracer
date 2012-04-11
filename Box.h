@@ -28,13 +28,47 @@
 namespace ray
 {
 
+    /**
+     * @brief a drawable with the appearance of a cuboid. Texture mapping is
+     * implemented 
+     */
     class Box : public Drawable
     {
         public:
 
+            //! ctor
             Box();
+
+            /**
+             * ctor
+             * @param center the center of the box
+             * @param width width of the box
+             * @param height height of the box
+             * @param depth depth of the box
+            */
             Box(const math::Vec3& center, float width, float height, float depth);
+
+            /**
+             * ctor
+             * @param center the center of the box
+             * @param vec1 1st normal
+             * @param vec2 2nd normal
+             * @param width width of the box
+             * @param height height of the box
+             * @param depth depth of the box
+             */
             Box(const math::Vec3& center, const math::Vec3& vec1, const math::Vec3& vec2, float width, float height, float depth);
+
+            /**
+             * ctor
+             * @param name name of the box
+             * @param center the center of the box
+             * @param vec1 1st normal
+             * @param vec2 2nd normal
+             * @param width width of the box
+             * @param height height of the box
+             * @param depth depth of the box
+             */
             Box(const std::string& name, const math::Vec3& center, const math::Vec3& vec1, const math::Vec3& vec2, float width, float height, float depth);
 
             /**

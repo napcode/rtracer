@@ -22,8 +22,9 @@
  * @author Mathias Buhr
  *
  * @mainpage RTracer - A C++ Ray Tracer
- * This is class-documentation for the RTracer project. Feel free to add some useful
- * stuff here.
+ * This is the class-documentation for the RTracer project. Feel free to add some useful
+ * stuff here. Not everything is explained in "verbose"-mode. If anything is
+ * unclear, either contact me or just add the documentation yourself. 
  *
  *  For questions and problems contact:
  *  	- Mathias Buhr <mathias.buhr@informatik.tu-freiberg.de>
@@ -31,10 +32,25 @@
 
 #ifndef CONFIG_H
 #define CONFIG_H
-
-#define IMG_WIDTH 1280
-#define IMG_HEIGHT 1024 
-#define MAX_TRACE_DEPTH 1
-#define VERSION "v0.1beta" 
+/**
+ * @def IMG_WIDTH 
+ * height of output image 
+ */
+#define IMG_WIDTH 1280          
+/**
+ * @def IMG_HEIGHT 
+ * height of output image 
+ */
+#define IMG_HEIGHT 1024         
+/**
+ * @def MAX_TRACE_DEPTH 
+ * max iterations for recursive tracing
+ */
+#define MAX_TRACE_DEPTH 1      
+/**
+ * @def VERSION 
+ * version string 
+ */
+#define VERSION "v0.1beta"      
 
 #endif

@@ -29,7 +29,7 @@
 namespace ray
 {
     /**
-     * abstract interface for intersectable objects 
+     * @brief abstract interface for intersectable objects 
      */
     class IIntersectable
     {
@@ -46,8 +46,7 @@ namespace ray
     };
 
     /**
-     * a drawable object <br>
-     * abstract base class
+     * @brief abstract interface for drawable objects
      */
     class Drawable : public IIntersectable
     {

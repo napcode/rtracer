@@ -31,7 +31,6 @@ namespace ray
 
     /**
      * @brief the main interface to the ray tracer
-     * this class implements the actual ray tracer
      */
     class RayTracer 
     {

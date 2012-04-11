@@ -24,7 +24,7 @@
 namespace ray
 {
     /**
-     * a drawable sphere
+     * @brief guess what
      */
     class Sphere : public Drawable
     {

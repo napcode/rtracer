@@ -1,7 +1,7 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$classray_1_1_drawable.html" title="ray::Drawable" alt="" coords="89,83,196,112"/>
-<area shape="rect" id="node11" href="$classray_1_1_light.html" title="a light source for the scene" alt="" coords="220,83,300,112"/>
-<area shape="rect" id="node5" href="$classray_1_1_box.html" title="ray::Box" alt="" coords="5,160,77,189"/>
-<area shape="rect" id="node7" href="$classray_1_1_plane.html" title="ray::Plane" alt="" coords="101,160,184,189"/>
-<area shape="rect" id="node9" href="$classray_1_1_sphere.html" title="ray::Sphere" alt="" coords="208,160,301,189"/>
+<area shape="rect" id="node3" href="$classray_1_1_drawable.html" title="abstract interface for drawable objects" alt="" coords="89,80,191,107"/>
+<area shape="rect" id="node11" href="$classray_1_1_light.html" title="a light source for the scene" alt="" coords="215,80,291,107"/>
+<area shape="rect" id="node5" href="$classray_1_1_box.html" title="a drawable with the appearance of a cuboid. Texture mapping is implemented" alt="" coords="5,155,75,181"/>
+<area shape="rect" id="node7" href="$classray_1_1_plane.html" title="a drawable with the appearance of a plane. Texture mapping is implemented" alt="" coords="99,155,180,181"/>
+<area shape="rect" id="node9" href="$classray_1_1_sphere.html" title="guess what" alt="" coords="205,155,293,181"/>
 </map>

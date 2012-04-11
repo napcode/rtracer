@@ -25,7 +25,8 @@
 namespace ray
 {
     /**
-     * a drawable plane
+     * @brief a drawable with the appearance of a plane. Texture mapping is
+     * implemented 
      */
     class Plane : public Drawable
     {

@@ -1,7 +1,5 @@
 <map id="G" name="G">
-<area shape="rect" id="node2" href="$classray_1_1_drawable.html" title="ray::Drawable" alt="" coords="40,213,147,243"/>
-<area shape="rect" id="node4" href="$classray_1_1_i_intersectable.html" title="ray::IIntersectable" alt="" coords="5,117,139,147"/>
-<area shape="rect" id="node6" href="$classray_1_1_material.html" title="this holds all material properties This holds all material properties. It can be reused by multiple d..." alt="" coords="163,117,261,147"/>
-<area shape="rect" id="node8" href="$classray_1_1_texture.html" title="a texture class stores all data needed for texturing" alt="" coords="165,5,259,35"/>
-<area shape="rect" id="node10" href="$classmath_1_1_vec3f.html" title="math::Vec3f" alt="" coords="171,213,269,243"/>
+<area shape="rect" id="node2" href="$classray_1_1_drawable.html" title="abstract interface for drawable objects" alt="" coords="84,96,185,123"/>
+<area shape="rect" id="node4" href="$classray_1_1_i_intersectable.html" title="abstract interface for intersectable objects" alt="" coords="5,5,131,32"/>
+<area shape="rect" id="node6" href="$classray_1_1_material.html" title="Class for storing material properties." alt="" coords="155,5,249,32"/>
 </map>

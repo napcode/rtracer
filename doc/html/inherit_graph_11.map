@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1" href="$classray_1_1_i_intersectable.html" title="ray::IIntersectable" alt="" coords="7,85,140,115"/>
-<area shape="rect" id="node3" href="$classray_1_1_drawable.html" title="ray::Drawable" alt="" coords="191,59,297,88"/>
-<area shape="rect" id="node11" href="$classray_1_1_light.html" title="a light source for the scene" alt="" coords="204,112,284,141"/>
-<area shape="rect" id="node5" href="$classray_1_1_box.html" title="ray::Box" alt="" coords="359,5,431,35"/>
-<area shape="rect" id="node7" href="$classray_1_1_plane.html" title="ray::Plane" alt="" coords="353,59,436,88"/>
-<area shape="rect" id="node9" href="$classray_1_1_sphere.html" title="ray::Sphere" alt="" coords="348,112,441,141"/>
+<area shape="rect" id="node1" href="$classray_1_1_i_intersectable.html" title="abstract interface for intersectable objects" alt="" coords="5,81,131,108"/>
+<area shape="rect" id="node3" href="$classray_1_1_drawable.html" title="abstract interface for drawable objects" alt="" coords="179,56,280,83"/>
+<area shape="rect" id="node11" href="$classray_1_1_light.html" title="a light source for the scene" alt="" coords="191,107,267,133"/>
+<area shape="rect" id="node5" href="$classray_1_1_box.html" title="a drawable with the appearance of a cuboid. Texture mapping is implemented" alt="" coords="338,5,409,32"/>
+<area shape="rect" id="node7" href="$classray_1_1_plane.html" title="a drawable with the appearance of a plane. Texture mapping is implemented" alt="" coords="333,56,414,83"/>
+<area shape="rect" id="node9" href="$classray_1_1_sphere.html" title="guess what" alt="" coords="329,107,418,133"/>
 </map>

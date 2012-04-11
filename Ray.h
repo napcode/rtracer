@@ -24,7 +24,7 @@
 namespace ray
 {
     /**
-     * this seems to be important for a raytracer...but...it isn't
+     * @brief this seems to be important for a raytracer...but...actually...it isn't
      */
     class Ray
     {

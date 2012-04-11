@@ -26,8 +26,7 @@
 namespace ray
 {
     /**
-     * an instance of this class holds all relevant data for a drawable scene<br>
-     * memory management is done here
+     * @brief Class holds all data which describe the scene to drawn
      */
     class Scene
     {
@@ -36,7 +35,7 @@ namespace ray
             Scene();
             /**
              * dtor <br>
-             * all associated data is deleted on destruction & all reference to the data of this scene become invalid
+             * all associated data is deleted on destruction & all references to the data of this scene wil be invalidated
              */
             ~Scene();
 

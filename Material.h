@@ -31,8 +31,7 @@ namespace ray
     class Texture;
 
     /**
-     * @brief this holds all material properties
-     * This holds all material properties. It can be reused by multiple drawables.
+     * @brief Class for storing material properties
      */
     class Material 
     {
