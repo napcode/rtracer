@@ -1,0 +1,27 @@
+var classray_1_1_material =
+[
+    [ "Material", "classray_1_1_material.html#a137e987401b63eb7c6c27c3e38bc74b5", null ],
+    [ "getAmbientFactor", "classray_1_1_material.html#ac3224587327effc4298091c749e43a6c", null ],
+    [ "getColor", "classray_1_1_material.html#adf80d99c64f5e76716f7bac7b6b0fb6a", null ],
+    [ "getColor", "classray_1_1_material.html#af642b9f68d7e39364f4ca468b67957cd", null ],
+    [ "getDiffuseFactor", "classray_1_1_material.html#a5a800ad27936500849e25797de9c3878", null ],
+    [ "getNormalMap", "classray_1_1_material.html#a975829ed841888fe1e8f564cadbdb574", null ],
+    [ "getNormalMap", "classray_1_1_material.html#af1ea00082713f1c70f13a7e00495104b", null ],
+    [ "getReflectionFactor", "classray_1_1_material.html#afed2b00cdd6d2c6ddb8368c16f26b617", null ],
+    [ "getScaleU", "classray_1_1_material.html#ac2ef85107fe3b7b1bd7e44656ecb8db1", null ],
+    [ "getScaleV", "classray_1_1_material.html#a4b28447bdcec23e6914d784209f74d0e", null ],
+    [ "getSpecular", "classray_1_1_material.html#ad748dedc5c557d529727949b2514457f", null ],
+    [ "getTexture", "classray_1_1_material.html#a59852126c8a1a146bb31da03872df93f", null ],
+    [ "getTexture", "classray_1_1_material.html#a884fa54f60155aa00483d3eceb38dc32", null ],
+    [ "getTransparency", "classray_1_1_material.html#a932483359d52d9f8da16f0dd68892fe3", null ],
+    [ "operator=", "classray_1_1_material.html#af229eea91f2407c53a56fc679fe80cf2", null ],
+    [ "setAmbientFactor", "classray_1_1_material.html#a201aaff29d9539bc607013c4daf7c1ae", null ],
+    [ "setColor", "classray_1_1_material.html#a560f7f3ac5b5e73524fc96255840f6c9", null ],
+    [ "setDiffuseFactor", "classray_1_1_material.html#a0931dbf9b7241e5e9fff63c048cd1f72", null ],
+    [ "setNormalMap", "classray_1_1_material.html#a505c5c0243d6d5ea4cb8b080883b5eaf", null ],
+    [ "setReflectionFactor", "classray_1_1_material.html#a7cdec1b34882eddf48792290ade59ec8", null ],
+    [ "setScaleUV", "classray_1_1_material.html#a1a628d2eb192043ea521788c79c96867", null ],
+    [ "setSpecular", "classray_1_1_material.html#a3d60c041f873c41a3eefe4cbe1c9a3a3", null ],
+    [ "setTexture", "classray_1_1_material.html#aa13009b4f2460c8fee53154ee74f7370", null ],
+    [ "setTransparency", "classray_1_1_material.html#a1b85ed472164fcc4bf1ec8fe97f70ae1", null ]
+];
