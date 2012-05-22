@@ -19,7 +19,7 @@
 #ifndef RAY_TEXTURE_H
 #define RAY_TEXTURE_H
 
-#include <stdint.h>
+#include "os.h"
 #include <map>
 #include <string>
 #include "math/Vec4.h"

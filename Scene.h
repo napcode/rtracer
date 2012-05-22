@@ -21,7 +21,7 @@
 #include "Drawable.h"
 #include "Texture.h"
 #include "Light.h"
-#include <stdint.h>
+#include "os.h"
 
 namespace ray
 {

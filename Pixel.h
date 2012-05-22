@@ -19,7 +19,7 @@
 #define RAY_PIXEL_H
 
 #include <vector>
-#include <stdint.h>
+#include "os.h"
 #include "math/Vec3.h"
 #include "math/Vec4.h"
 namespace ray 

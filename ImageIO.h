@@ -18,7 +18,7 @@
 #ifndef RAY_IMAGEIO_H
 #define RAY_IMAGEIO_H
 
-#include <stdint.h>
+#include "os.h"
 #include <string>
 #include <iostream>
 #include <fstream>
