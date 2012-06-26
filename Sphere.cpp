@@ -57,8 +57,8 @@ float Sphere::getRadius() const
 }
 bool Sphere::intersect(const Ray& ray, Vec3& point,  float& dist) const
 {
-
-    Vec3 m = ray.getOrigin() - _center;
+#ifdef OPTIMIZED
+	Vec3 m = ray.getOrigin() - _center;
     float b = m * ray.getDirection();
     float c = m * m - _radius * _radius;
 
@@ -73,8 +73,29 @@ bool Sphere::intersect(const Ray& ray, Vec3& point,  float& dist) const
     if ( dist < 0.0f )
         dist = 0.0f;
     point = ray.getOrigin() + ray.getDirection() * dist;
-    return true;
+	return true;
+#else
+	math::Vec3 vec = _center - ray.getOrigin();
+	float hyp = vec.length();
+
+	vec.normalize();
+	float alpha = vec * ray.getDirection();
+
+	float ank = cos(acos(alpha)) * hyp;
+	float gka = sin(acos(alpha)) * hyp;
+	float ankBuffer = ank;
+
+	if(gka >= _radius) return false;
+	
+	hyp = _radius;
+	ank = sqrt( (hyp * hyp) - (gka * gka) );
+
+	point = ray.getOrigin() + ray.getDirection() * (ankBuffer - ank);
+
+	return true;
+#endif
 }
+
 Vec3 Sphere::getNormalAt(const Vec3& pos) const
 {
     const Texture *tex = getMaterial().getNormalMap();
@@ -98,20 +119,40 @@ Vec4 Sphere::getColorAt(const Vec3& pos) const
 {
     const Texture *tex = getMaterial().getTexture();
     if ( tex ) {
-        /* 
-           Vec3 vp = (pos - _center) * _radius;
-           float phi = acosf( -(vp*G_VN) );
-           float u, v;
-           v = phi * (1.0f / (getMaterial().getScaleV() *M_PI));
-           float theta = acosf( ( G_VE*vp ) / sinf(phi) ) * (2.0f / M_PI);
-           if ( G_VC * vp >= 0)
-           u = (1.0f - theta) * (1.0f / getMaterial().getScaleU());
-           else
-           u = theta * (1.0f / getMaterial().getScaleU() );
-           */
-        float u = pos.x() / (sqrt(pos.x()*pos.x() + pos.y()*pos.y() + pos.z()*pos.z()));
-        float v = pos.y() / (sqrt(pos.x()*pos.x() + pos.y()*pos.y() + pos.z()*pos.z()));
-        return tex->getTexel(u, v);//.componentMultiply( getMaterial().getColor() );
+		/* 
+		//Matze I
+		Vec3 vp = (pos - _center) * _radius;
+		float phi = acosf( -(vp*G_VN) );
+		float u, v;
+		v = phi * (1.0f / (getMaterial().getScaleV() *M_PI));
+		float theta = acosf( ( G_VE*vp ) / sinf(phi) ) * (2.0f / M_PI);
+		if ( G_VC * vp >= 0)
+		u = (1.0f - theta) * (1.0f / getMaterial().getScaleU());
+		else
+		u = theta * (1.0f / getMaterial().getScaleU() );
+		*/
+
+		/*
+		//Matze II
+        float u = acos(pos.x() / _radius );
+        float v = acos(pos.y() / _radius );
+		*/
+
+		/*
+		//Flatmapping
+		math::Vec3f normal = getNormalAt(pos);
+		normal.normalize();
+		float u = (asin(normal[0])/M_PI + 0.5) * getMaterial().getScaleU();
+		float v = (asin(normal[1])/M_PI + 0.5) * getMaterial().getScaleV();
+		*/
+
+		//Spheremapping
+		math::Vec3f normal = getNormalAt(pos);
+		normal.normalize();
+		float u = atan2(normal[1],normal[0])*getMaterial().getScaleU();
+		float v = acos(normal[2]/_radius)*getMaterial().getScaleV();
+
+        return tex->getTexel(u, v);
     }
     else 
         return getMaterial().getColor();
