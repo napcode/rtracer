@@ -1,11 +1,3 @@
-/*
- *  Matrix4f.h
- *
- *  Created by Gommlich on 05.05.10.
- *  Copyright 2010 TU BA Freiberg. All rights reserved.
- *
- */
-
 #ifndef MATH_MATRIX4F_H
 #define MATH_MATRIX4F_H
 

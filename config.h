@@ -10,8 +10,7 @@
  *       Revision:  none
  *       Compiler:  gcc
  *
- *         Author:  Mathias Buhr (), buhr@informatik.tu-freiberg.de
- *        Company:  TU-Bergakademie Freiberg
+ *         Author:  Mathias Buhr (), buhr@apparatus.de
  *
  * =====================================================================================
  */
@@ -27,7 +26,7 @@
  * unclear, either contact me or just add the documentation yourself. 
  *
  *  For questions and problems contact:
- *  	- Mathias Buhr <mathias.buhr@informatik.tu-freiberg.de>
+ *  	- Mathias Buhr <buhr@apparatus.de>
  */
 
 #ifndef CONFIG_H

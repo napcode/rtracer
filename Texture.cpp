@@ -10,8 +10,7 @@
  *       Revision:  none
  *       Compiler:  gcc
  *
- *         Author:  Mathias Buhr (), buhr@informatik.tu-freiberg.de
- *        Company:  TU-Bergakademie Freiberg
+ *         Author:  Mathias Buhr (), buhr@apparatus.de
  *
  * =====================================================================================
  */

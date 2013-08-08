@@ -1,17 +1,3 @@
-// =====================================================================================
-// 
-//       Filename:  Matrix.cpp
-// 
-//    Description:  
-// 
-//       Revision:  none
-//       Compiler:  g++
-// 
-//         Author: Frank Gommlich (drego), gommlich@informatik.tu-freiberg.
-//        Company: TU-Freiberg
-// 
-// =====================================================================================
-
 #include "Matrix4.h"
 
 using namespace math;
